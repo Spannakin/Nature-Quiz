@@ -37,12 +37,14 @@ Thank you for visiting my project, if you have any questions or feedback please 
 [Back to Top](#table-of-contents)
 
 ### User Goals
-* to have a fun expreience learning new facts.
+* To have a fun expreience learning new facts.
 * To test their knowledge of science and nature.
 
 ### User Stories
 
-* 
+* I want to be able to easily navigate the site
+* I want ro be able to see my score
+
 
 [Back to Top](#table-of-contents)
 
@@ -92,7 +94,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 [Tablet Game Screen](wireframe/QuizletteTabletGame.png)
 
 [Mobile Home Screen](wireframes/QuizletteMobileHome.png)
-[Monile Game Screen](wireframe/QuizletteMobileGame.png)
+[Mobile Game Screen](wireframe/QuizletteMobileGame.png)
 
 [Back to Top](#table-of-contents)
 
@@ -117,12 +119,13 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 * HTML
 * CSS
+* Java Script
 * jquery
 
 #### Libraries & Frameworks
 * [Font Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
-* 
+* [Boot Strap](https://getbootstrap.com/)
 
 #### Technologies
 
