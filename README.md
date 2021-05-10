@@ -1,52 +1,196 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Quizlette
+* How well do you know science and nature? Take the quiz and find out!
+A small web quiz to test your knowledge of  science and nature, just for fun.
 
-Welcome Spannakin,
+Thank you for visiting my project, if you have any questions or feedback please head over to my Github contacts and get in touch.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+---
+## Table of contents 
 
-## Gitpod Reminders
+* [UX](#ux)
+    * [Site Owners Goals](#site-owners-goals)
+    * [User Goals](#user-goals)
+    * [User Stories](#user-stories)
+    * [User Requirements and Expectations](#user-requirements-and-expectations)
+    * [Design Choices](#design-choices)
+* [Wireframes](#wireframes)
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Features to be implemented](#features-to-be-implemented)
+* [Technologies used](#technologies-used)
+* [Testing](#testing)
+* [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI you can use:
-
-`heroku login -i`
-
-If you have Multi-Factor Authentication (MFA) enabled then use the API key that was generated for you at [Heroku](https://dashboard.heroku.com/account) as your password.
-This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
 ---
 
-Happy coding!
+## UX
+
+### Site Owner Goals
+* A small easy to use quiz that will test users knowledge of science and nature.
+* To be enganging to users and will encourage them to come back again to see if they have improved.
+* The site is easy to navigate.
+* The site is aesthetically pleasing.
+
+[Back to Top](#table-of-contents)
+
+### User Goals
+* to have a fun expreience learning new facts.
+* To test their knowledge of science and nature.
+
+### User Stories
+
+* 
+
+[Back to Top](#table-of-contents)
+
+### User Requirements and Expectations
+#### Requirements
+  * 
+
+#### Expectations
+  * 
+
+[Back to Top](#table-of-contents)
+
+---
+
+### Design Choices
+* Overview
+
+   
+* Fonts
+
+   
+* Icons
+
+   I used icons from the [Font Awesome library](https://fontawesome.com/ "Font Awesome") 
+   
+* Colours
+
+   
+
+![Color Palette]
+
+  * 
+
+
+[Back to Top](#table-of-contents)
+
+### Wireframes
+
+   I decided to use [Balamiq Wireframes](https://balsamiq.com/) to create my wireframes, 
+
+   Wireframes can be view on the following links:
+
+[Desktop Wireframe](wireframes/)
+
+[Tablet Wireframe](wireframes/)
+
+[Mobile Wireframe](wireframes/)
+
+[Back to Top](#table-of-contents)
+
+---
+
+### Features 
+
+#### Existing Features
+
+##### ???
+
+#### Features to be implemented
+
+* 
+
+[Back to Top](#table-of-contents)
+
+---
+
+### Technologies used
+#### Languages
+
+* HTML
+* CSS
+* jquery
+
+#### Libraries & Frameworks
+* [Font Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
+* 
+
+#### Technologies
+
+* Git
+* [GitPod] (https://github.com/)
+* Balsamiq
+* W3C HTML Validation Service
+* W3C CSS Validation Service
+
+[Back to Top](#table-of-contents)
+
+---
+
+### Testing
+
+#### ???
+   __???__
+
+  * Plan
+
+
+  * Implementation
+
+     
+  * Test
+
+    
+  * Result
+
+    
+  * Verdict
+
+     
+  
+[Back to Top](#table-of-contents)
+
+---
+### Bugs
+
+#### ???
+
+  
+[Back to Top](#table-of-contents)
+
+---
+
+### Deployment
+
+This project was deployed via GitHub by executing the following steps.
+After writing the code, committing and pushing it to GitHub:
+* Navigate to the repository on github and click **Settings**.
+* From there, go to the **Source section** within the Github Pages section.
+* Select **master branch** on the dropdown menu, and click save.
+* Now the website is live on:
+```
+https://yourgithubusername.github.io/your-repo-name
+```
+* Any time commits and pushes are sent to Github, the Github Pages site should update shortly after.
+### **To run the project locally:**
+1. Click the **green Clone or Download button** on the Github Repository
+1. Using the **Clone with HTTPS option**, copy the link displayed.
+1. Open your IDE, and ensure the Git Terminal is open.
+1. Change the working directory to the location where the cloned directory is to go.
+1. Use the **"git clone" command** and paste the url copied in the second step.
+
+
+[Back to Top](#table-of-contents)
+
+---
+
+### Credits
+
+  * 
+[Back to Top](#table-of-contents)
