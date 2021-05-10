@@ -85,11 +85,14 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
    Wireframes can be view on the following links:
 
-[Desktop Wireframe](wireframes/)
+[Desktop Home Screen](wireframes/QuizletteDesktopHome.png)
+[Desktop Game Screen](wireframes/QuizletteDesktopGame.png)
 
-[Tablet Wireframe](wireframes/)
+[Tablet Home Screen](wireframes/QuizletteTabletHome.png)
+[Tablet Game Screen](wireframe/QuizletteTabletGame.png)
 
-[Mobile Wireframe](wireframes/)
+[Mobile Home Screen](wireframes/QuizletteMobileHome.png)
+[Monile Game Screen](wireframe/QuizletteMobileGame.png)
 
 [Back to Top](#table-of-contents)
 
