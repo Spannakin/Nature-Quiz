@@ -31,7 +31,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 ### Site Owner Goals
 * A small easy to use quiz that will test users knowledge of science and nature.
 * To be enganging to users and will encourage them to come back again to see if they have improved.
-* The site is easy to navigate.
+* The site is easy to navigate and simple to use.
 * The site is aesthetically pleasing.
 
 [Back to Top](#table-of-contents)
@@ -42,8 +42,10 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### User Stories
 
-* I want to be able to easily navigate the site
-* I want ro be able to see my score
+* As a user, I want to be able to easily navigate the site.
+* As a user, I want ro be able to see my score.
+* As a user I expect the different gaame pages to have a cohesive design and layout.
+* 
 
 
 [Back to Top](#table-of-contents)
@@ -74,7 +76,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
    
 
-![Color Palette]
+![Color Palette](wireframes/QuizlettePalette.png)
 
   * 
 
