@@ -64,19 +64,22 @@ Thank you for visiting my project, if you have any questions or feedback please 
 ### Design Choices
 * Overview
 
-   
-* Fonts
+   I wanted to keep the design clean and simple for the user to focus on the game.
 
+* Fonts
+   I used [Google Fonts](https://fonts.google.com/ "Google Fonts") to select the fonts used on the site.
    
 * Icons
 
    I used icons from the [Font Awesome library](https://fontawesome.com/ "Font Awesome") 
    
 * Colours
-
-   
+   I used [Coolors](https://coolors.co/ "Coolors") to find the color palette for the site, I decided to go for a range of blues and greys as this is a
+   subtle theme and will not be distracting to the user as they take the quiz.
 
 ![Color Palette](wireframes/QuizlettePalette.png)
+
+
 
   * 
 
