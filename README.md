@@ -67,7 +67,9 @@ Thank you for visiting my project, if you have any questions or feedback please 
    I wanted to keep the design clean and simple for the user to focus on the game.
 
 * Fonts
+
    I used [Google Fonts](https://fonts.google.com/ "Google Fonts") to select the fonts used on the site.
+   The fonts I chose were 
    
 * Icons
 
