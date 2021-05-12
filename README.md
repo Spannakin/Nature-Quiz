@@ -92,8 +92,8 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
    Wireframes can be view on the following links:
 
-[Desktop Home Screen](wireframes/QuizletteDesktopHome.png)
-[Desktop Game Screen](wireframes/QuizletteDesktopGame.png)
+   [Desktop Home Screen](wireframes/QuizletteDesktopHome.png)
+   [Desktop Game Screen](wireframes/QuizletteDesktopGame.png)
 
 [Tablet Home Screen](wireframes/QuizletteTabletHome.png)
 [Tablet Game Screen](wireframe/QuizletteTabletGame.png)
@@ -107,13 +107,16 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### Features 
 
-#### Existing Features
-
-##### ???
+* Use of [Open Trivia API](https://opentdb.com/ "Open Trivia")
+* Validation of answers
+* Ability to see score
+* Results sreen with message at end of game
 
 #### Features to be implemented
 
-* 
+* More topics to be added- to make game moe specific, eg. mammals, birds, reptiles, etc.
+* Ability to record high score to compete against
+* The choice of difficlty of questions
 
 [Back to Top](#table-of-contents)
 
@@ -131,6 +134,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 * [Font Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [Boot Strap](https://getbootstrap.com/)
+* [Coolors](https://coolors.co/)
 
 #### Technologies
 
