@@ -90,9 +90,10 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ![Color Palette](wireframes/QuizlettePalette.png)
 
-
-
-  * 
+  * #274C77- is a dark blue and will be used for the buttons
+  * #6096BA- is a sea blue, this will be the main background color
+  * #A3CEF1- is a cloud blue this will be used for borders and highlighting
+  * #8B8C89- is a dove grey this will be used at the main text color as it contrasts well with the blue colors
 
 
 [Back to Top](#table-of-contents)
