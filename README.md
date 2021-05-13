@@ -1,5 +1,7 @@
 # Quizlette
-* How well do you know science and nature? Take the quiz and find out!
+How well do you know science and nature?
+
+Take the quiz and find out!
 A small web quiz to test your knowledge of  science and nature, just for fun.
 
 Thank you for visiting my project, if you have any questions or feedback please head over to my Github contacts and get in touch.
@@ -52,7 +54,9 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### User Requirements and Expectations
 #### Requirements
-  * 
+  * Easy to navigate, intuitive design
+  * Visually appealing home page and game play
+  * Keep the score of the player
 
 #### Expectations
   * 
