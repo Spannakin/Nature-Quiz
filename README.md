@@ -59,7 +59,11 @@ Thank you for visiting my project, if you have any questions or feedback please 
   * Keep the score of the player
 
 #### Expectations
-  * 
+  * Questions are appropriate to the topics
+  * Show user if the answer is right or not
+  * Shows a running score of the users correct answers
+  * Shows final Result
+  * Shows a congratulatory message at the end of the game
 
 [Back to Top](#table-of-contents)
 
