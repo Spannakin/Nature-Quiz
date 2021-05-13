@@ -94,13 +94,16 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
    Wireframes can be view on the following links:
 
-   [Desktop Home Screen](wireframes/QuizletteDesktopHome.png)
-   [Desktop Game Screen](wireframes/QuizletteDesktopGame.png)
+[Desktop Home Screen](wireframes/QuizletteDesktopHome.png)
+
+[Desktop Game Screen](wireframes/QuizletteDesktopGame.png)
 
 [Tablet Home Screen](wireframes/QuizletteTabletHome.png)
+
 [Tablet Game Screen](wireframe/QuizletteTabletGame.png)
 
 [Mobile Home Screen](wireframes/QuizletteMobileHome.png)
+
 [Mobile Game Screen](wireframe/QuizletteMobileGame.png)
 
 [Back to Top](#table-of-contents)
@@ -119,6 +122,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 * More topics to be added- to make game moe specific, eg. mammals, birds, reptiles, etc.
 * Ability to record high score to compete against
 * The choice of difficlty of questions
+* The ability to share your score on social media
 
 [Back to Top](#table-of-contents)
 
