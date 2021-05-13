@@ -77,7 +77,8 @@ Thank you for visiting my project, if you have any questions or feedback please 
 * Fonts
 
    I used [Google Fonts](https://fonts.google.com/ "Google Fonts") to select the fonts used on the site.
-   The fonts I chose were 
+   The fonts I chose were [KoHo](https://fonts.google.com/specimen/KoHo?query=koho "KoHo") for the main text to be used on the site and [Rock Salt](https://fonts.google.com/specimen/Rock+Salt?query=Rock+Salt "Rock Salt") for the text on the welcomepage as it
+   has a softer feel and is more visually welcoming.
    
 * Icons
 
