@@ -9,3 +9,8 @@ body {
 h1 {
     font-family: 'Rock Salt', cursive;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+}
