@@ -3,6 +3,9 @@
 html, body {
     width: 100vw;
     height:100vh;
+    background-image: url(../images/heatherforset.jpeg); 
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #6096ba;
     font-size: 62.5%;
     box-sizing: border-box;
@@ -69,5 +72,5 @@ h2 {
 }
 
 .home-button {
-    padding-top: 5rem;
+    margin-top: 5rem;
 }
