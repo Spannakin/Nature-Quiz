@@ -12,15 +12,28 @@
 <title>Quizlette</title>
 </head>
 <body>
-    <div class="container">
-        <div id="home" class="flex-centre flex-column hide">
+    <!--Welcome Screen--> 
+    <section class="container">
+        <div id="home" class="flex-centre flex-column">
             <h1>Welcome to Quizlette</h1>
             <h2>Choose your quiz level</h2>
             <a class="btn" href="#level-select">Play Game</a>
             <a class="btn" href="#how-to-play">How to play</a>
         </div>
-    </div>
-    <div class="container game-select-page">
+    </section>
+    <!--Level selection-->
+    <section class="container justify-center flex-column hide" id="level-select">
+        <h1 class="game-title">Quizlette</h1>
+        <h2 class="question">What level would you like?</h2>
+             <div class="choices-container">
+                <p class="btn easy-game">Easy</p>
+                <p class=" btn med-game">Medium</p>
+                <p class="btn hard-game">Hard</p>
+            </div>
+        <a class="btn home-button" href="#home">Home</a>
+    </section>
+    <!--Game Play-->
+    <section class="container game-select-page">
         <div id="game" class="justify-center flex-column hide">
             <h1 class="game-title">Quizlette</h1>
             <h2 class="question">Answer Question?</h2>
@@ -29,20 +42,12 @@
                 <p class=" btn answer-text">Answer B</p>
                 <p class="btn answer-text">Answer C</p>
                 <p class="btn answer-text">Answer D</p>
-                </div>
+        </div>
             <a class="btn home-button" href="/index.html">Home</a>
-        </div>
-        <div id="level-select" class="justify-center flex-column hide">
-            <h1 class="game-title">Quizlette</h1>
-            <h2 class="question">What level would you like?</h2>
-                <div class="choices-container">
-                <p class="btn easy-game">Easy</p>
-                <p class=" btn med-game">Medium</p>
-                <p class="btn hard-game">Hard</p>
-                </div>
-            <a class="btn home-button" href="#home">Home</a>
-        </div>
-        <div class="container">
+    </section>
+    </section>
+    <!--How to play-->
+    <section class="container">
         <div id="how-to-play" class="justify-center flex-column hide"></div>
             <h2>How to Play</h2>
             <p class="play-text">
@@ -50,8 +55,8 @@
             choose your answer by clicking on your choice. You will see 5 questions  a the end you will be able to see you score, then choose to play again or return to the home screen.
             </p>
             <a class="btn home-button" href="/index.html">Home</a>
-        </div>
-    </div>
+    </section>
+    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

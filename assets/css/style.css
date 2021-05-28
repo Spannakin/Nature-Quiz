@@ -77,6 +77,6 @@ h2 {
 
 /*Display Functions */
 
-.hidden {
-    display: hidden;
+.hide {
+    display: none;
 }
