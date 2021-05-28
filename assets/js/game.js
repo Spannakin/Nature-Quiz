@@ -1,17 +1,40 @@
 //---Game Screen setup---//
-let screenSelect = document.getElementsByClassName(game-select-page);
+let screenSelect = document.getElementById(home);
 let welcomeScreen = document.getElementById(home);
 let gameScreen = document.getElementById(game);
-let levelSelect = document.getElementById(level-select)
-let howToPlay = document.getElementById(how-to-play)
+let levelSelect = document.getElementById(level-select);
+let howToPlay = document.getElementById(how-to-play);
+let levelButton = document.getElementsByClassName(level-select-button);
+let howToButton = document.getElementsByClassName(instructions-button);
 
-function toWelcomeScreen() {
-    welcomeScreen.classList.remove("hide");
+//---Event listeners to move between screens---//
+
+levelButton.addEventListner('click'() => {
+    welcomeScreen.classList.add('hide');
+    levelSelect.classList.remove('hide');
+}); 
+
+
+howToButton.addEventListner('click'() => {
+    welcomeScreen.classList.add('hide');
+    howToPlay.classList.remove('hide');
+    screenSelectMovement();
+});
+
+
+/** Home screen 
     gameScreen.classList.add("hide");
     levelSelect.classList.add("hide");
     howToPlay.classList.add("hide");
     screenSelectMovement();
-}
+*/
+    
+/**Level Choice**/
+/* each chose should load question bank and lead to game screen */
+
+const easyGame = docment.getElementsByClassName(easy-game);
+const medGame = document.getElementsByClassName(med-game);
+const hardGame = document.getElementsByClassName(hard-game);
 
 function toGameScreen() {
     welcomeScreen.classList.add("hide");
@@ -20,26 +43,6 @@ function toGameScreen() {
     howToPlay.classList.add("hide");
     screenSelectMovement();
 }
-
-function toLevelSelectScreen() {
-    welcomeScreen.classList.add("hide");
-    gameScreen.classList.add("hide");
-    levelSelect.classList.remove("hide");
-    howToPlay.classList.add("hide");
-    screenSelectMovement();
-}
-
-function toHowToPlayScreen() {
-    welcomeScreen.classList.add("hide");
-    gameScreen.classList.add("hide");
-    levelSelect.classList.add("hide");
-    howToPlay.classList.remove("hide");
-    screenSelectMovement();
-    
-//---Level Choice
-const easyGame = docment.getElementsByClassName(easy-game);
-const medGame = document.getElementsByClassName(med-game);
-const hardGame = document.getElementsByClassName(hard-game);
 
 //---Game Question Setup--//
 const question = document.getElementsByClassName(question);
@@ -51,4 +54,3 @@ const question = document.getElementsByClassName(question);
 //---Score Tracker---//
 
 //---Results---//
-
