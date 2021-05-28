@@ -13,13 +13,11 @@
 </head>
 <body>
     <!--Welcome Screen--> 
-    <section class="container">
-        <div id="home" class="flex-centre flex-column">
-            <h1>Welcome to Quizlette</h1>
-            <h2>Choose your quiz level</h2>
-            <a class="btn" href="#level-select">Play Game</a>
-            <a class="btn" href="#how-to-play">How to play</a>
-        </div>
+    <section class="container flex-centre flex-column" id="home">
+        <h1>Welcome to Quizlette</h1>
+        <h2>Choose your quiz level</h2>
+        <a class="btn" href="#level-select">Play Game</a>
+        <a class="btn" href="#how-to-play">How to play</a>
     </section>
     <!--Level selection-->
     <section class="container justify-center flex-column hide" id="level-select">
@@ -33,8 +31,7 @@
         <a class="btn home-button" href="#home">Home</a>
     </section>
     <!--Game Play-->
-    <section class="container game-select-page">
-        <div id="game" class="justify-center flex-column hide">
+    <section class="container justify-center flex-column hide" id="game">
             <h1 class="game-title">Quizlette</h1>
             <h2 class="question">Answer Question?</h2>
                 <div class="choices-container">
@@ -42,13 +39,12 @@
                 <p class=" btn answer-text">Answer B</p>
                 <p class="btn answer-text">Answer C</p>
                 <p class="btn answer-text">Answer D</p>
-        </div>
+                </div>
             <a class="btn home-button" href="/index.html">Home</a>
     </section>
     </section>
     <!--How to play-->
-    <section class="container">
-        <div id="how-to-play" class="justify-center flex-column hide"></div>
+    <section class="container justify-center flex-column hide" id="how-to-play">
             <h2>How to Play</h2>
             <p class="play-text">
             To play Quizlette select play game you will then be directed to the game screen where you will see a question with four possible answers.
