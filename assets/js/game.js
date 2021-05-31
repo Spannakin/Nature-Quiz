@@ -1,9 +1,10 @@
 //---Game Screen setup---//
-let screenSelect = document.getElementById(home);
+//---Screens--//
 let welcomeScreen = document.getElementById(home);
-let gameScreen = document.getElementById(game);
 let levelSelect = document.getElementById(level-select);
 let howToPlay = document.getElementById(how-to-play);
+let gameScreen = document.getElementById(game);
+//--Buttons--//
 let levelButton = document.getElementsByClassName(level-select-button);
 let howToButton = document.getElementsByClassName(instructions-button);
 
@@ -18,7 +19,6 @@ levelButton.addEventListner('click'() => {
 howToButton.addEventListner('click'() => {
     welcomeScreen.classList.add('hide');
     howToPlay.classList.remove('hide');
-    screenSelectMovement();
 });
 
 
