@@ -7,7 +7,10 @@ var homeScreen = document.getElementsByClassName("home");
 //--Buttons--//
 const levelButton = document.getElementById("level-select-button");
 const howButton = document.getElementById("how-to-button");
-const homeButton =document.getElementsByClassName("home-button"); 
+const homeButton = document.getElementsByClassName("home-button");
+const easyButton = document.getElementById("easy-button");
+const medButton = document.getElementById("med-button");
+const hardButton = document.getElementById("hard-button"); 
 
 //---Event listeners to move between screens---//
 
@@ -33,7 +36,7 @@ function homeScreen() {
 homeButton.addEventListener('click', homeScreen);
     
 /**Level Choice**/
-/* each chose should load question bank and lead to game screen */
+/* each choice should load question bank and lead to game screen */
 
 
 //---Game Question Setup--//
