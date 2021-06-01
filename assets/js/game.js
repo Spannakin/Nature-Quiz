@@ -2,17 +2,27 @@
 //---Screens--//
 var levelScreen = document.getElementById("level-select");
 var gameScreen = document.getElementById("game");
-var homeScreen = document.getElementsByClass("home");
+var howScreen = document.getElementById("how-to-play");
+var homeScreen = document.getElementsByClassName("home");
 //--Buttons--//
-
+const levelButton = document.getElementById("level-select-button");
+const howButton = document.getElementById("how-to-button");
 
 //---Event listeners to move between screens---//
-function levelScreenMovement(event) {
-    levelScreen.classList.remove('hide');
-    homeScreen.classList.add('hide');
+
+function levelScreen() {
+    homeScreen.classList.add("hide");
+    levelScreen.classList.remove("hide");
+    howToPlay.classList.add("hide");
 };
-let levelButton = document.getElementById("level-select-button");
-levelButton.addEventListener('click', levelScreenMovement)
+levelButton.addEventListener('click', levelScreen);
+
+function howScreen() {
+    homeScreen.classList.add("hide");
+    levelScreen.classList.add("hide");
+    howToPlay.classList.remove("hide");
+};
+
     
 /**Level Choice**/
 /* each chose should load question bank and lead to game screen */
