@@ -14,31 +14,43 @@ const hardButton = document.getElementById("hard-button");
 
 //---Event listeners to move between screens---//
 
-function levelScreen() {
+function levelScreenMove() {
     homeScreen.classList.add("hide");
     levelScreen.classList.remove("hide");
     howToPlay.classList.add("hide");
 };
-levelButton.addEventListener('click', levelScreen);
+levelScreenMove();
 
-function howScreen() {
+
+function howScreenMove() {
     homeScreen.classList.add("hide");
     levelScreen.classList.add("hide");
     howToPlay.classList.remove("hide");
 };
-howButton.addEventListener('click', howScreen);
+howScreenMove();
+//howButton.addEventListener('click', howScreen);
 
-function homeScreen() {
+function homeScreenMove() {
     homeScreen.classList.remove("hide");
     levelScreen.classList.add("hide");
     howToPlay.classList.add("hide");
 };
-homeButton.addEventListener('click', homeScreen);
+homeScreenMove();
+//homeButton.addEventListener('click', homeScreen);
     
 /**Level Choice**/
-/* each choice should load question bank and lead to game screen */
+//each choice should load question bank and lead to game screen */
+function loadEasy() {
+    fetch("https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple");
+}
 
+function loadMed() {
+    fetch ("https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple");
+}
 
+function loadHard() {
+    fetch("https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple");
+}
 //---Game Question Setup--//
 
 
