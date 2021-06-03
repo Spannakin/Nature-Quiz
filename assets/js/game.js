@@ -50,12 +50,17 @@ function loadHard() {
     fetch("https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple");
 }
 //---Game Question Setup--//
-
+// need to create and if/else for correct level question bank to load
 
 //---Answer selection---//
 
 //---Correct/Incorrect Answer---//
+// answer feedback- correct answer button turns green
+//answer feeback- button turns red
 
 //---Score Tracker---//
+//10 points per correct answer
 
 //---Results---//
+// create alert that has messgae of success
+// option to play again?
