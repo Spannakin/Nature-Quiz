@@ -223,5 +223,7 @@ https://yourgithubusername.github.io/your-repo-name
 
 ### Credits
 
-  * 
+  * Youtube- James Q Quick
+  * Youtube- DevEd
+  * CI tutors & Simen
 [Back to Top](#table-of-contents)
