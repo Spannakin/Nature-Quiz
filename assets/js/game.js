@@ -17,26 +17,24 @@ const hardButton = document.getElementById("hard-button");
 function levelScreenMove() {
     homeScreen.classList.add("hide");
     levelScreen.classList.remove("hide");
-    howToPlay.classList.add("hide");
+    howScreen.classList.add("hide");
 };
-levelScreenMove();
+levelButton.addEventListener('click', levelScreenMove);
 
 
 function howScreenMove() {
     homeScreen.classList.add("hide");
     levelScreen.classList.add("hide");
-    howToPlay.classList.remove("hide");
+    howScreen.classList.remove("hide");
 };
-howScreenMove();
-//howButton.addEventListener('click', howScreen);
+howButton.addEventListener('click', howScreenMove);
 
 function homeScreenMove() {
     homeScreen.classList.remove("hide");
     levelScreen.classList.add("hide");
-    howToPlay.classList.add("hide");
+    howScreen.classList.add("hide");
 };
-homeScreenMove();
-//homeButton.addEventListener('click', homeScreen);
+homeButton.addEventListener('click', homeScreenMove);
     
 /**Level Choice**/
 //each choice should load question bank and lead to game screen */
