@@ -38,17 +38,19 @@ homeButton.addEventListener('click', homeScreenMove);
     
 /**Level Choice**/
 //each choice should load question bank and lead to game screen */
-function loadEasy() {
-    fetch("https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple");
-}
+const fetchedEasyQuestions = fetchData(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
+fetchedEasyQuestions.then((data) => {
+    questions = data.results.map(fetchedEasyQuestions => {
+        const easyFormattedQuestion = {
+            question: fetchedEasyQuestions.question,
+        };
+    
+    })
 
-function loadMed() {
-    fetch ("https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple");
-}
+const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
 
-function loadHard() {
-    fetch("https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple");
-}
+const fetchedHardQuestions(`https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple`);
+
 //---Game Question Setup--//
 // need to create and if/else for correct level question bank to load
 
