@@ -26,19 +26,19 @@ let questions = [];
 const moveScreen = (type) => {
     switch(type){
         case'level':
-            homeScreen.classList.add("hide");
-            levelScreen.classList.remove("hide");
-            howScreen.classList.add("hide");
+            homeScreenRef.classList.add("hide");
+            levelScreenRef.classList.remove("hide");
+            howScreenRef.classList.add("hide");
         break;
         case 'how':
-            homeScreen.classList.add("hide");
-            evelScreen.classList.add("hide");
-            howScreen.classList.remove("hide");
+            homeScreenRef.classList.add("hide");
+            evelScreenRef.classList.add("hide");
+            howScreenRef.classList.remove("hide");
         break;
         case 'home':
-            homeScreen.classList.remove("hide");
-            levelScreen.classList.add("hide");
-            howScreen.classList.add("hide");
+            homeScreenRef.classList.remove("hide");
+            levelScreenRef.classList.add("hide");
+            howScreenRef.classList.add("hide");
         default:
         break;
     }
