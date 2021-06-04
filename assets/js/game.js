@@ -1,19 +1,19 @@
 //---Game Screen setup---//
 //---Screens--//
-const levelScreen = document.getElementById("level-select");
-const gameScreen = document.getElementById("game");
-const howScreen = document.getElementById("how-to-play");
-const homeScreen = document.getElementsByClassName("home");
+const levelScreen = document.querySelector("#level-select");
+const gameScreen = document.querySelector("#game");
+const howScreen = document.querySelector("#how-to-play");
+const homeScreen = document.gquerySelector(".home");
 //--Buttons--//
-const levelButton = document.getElementById("level-select-button");
-const howButton = document.getElementById("how-to-button");
-const homeButton = document.getElementsByClassName("home-button");
-const easyButton = document.getElementById("easy-button");
-const medButton = document.getElementById("med-button");
-const hardButton = document.getElementById("hard-button"); 
+const levelButton = document.querySelector("#level-select-button");
+const howButton = document.querySelector("#how-to-button");
+const homeButton = document.querySelector(".home-button");
+const easyButton = document.querySelector("#easy-button");
+const medButton = document.querySelector("#med-button");
+const hardButton = document.querySelector("#hard-button"); 
 //--Game--//
-const question = document.getElementById("question");
-const choices = document.Array.from(document.getElementById("answer-text"));
+const question = document.querySelector("#question");
+const choices = Array.from(document.querySelector(".answer-text"));
 let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
