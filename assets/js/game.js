@@ -44,9 +44,9 @@ const moveScreen = (type) => {
     }
 }
 
-levelButton.addEventListener('click', moveScreen('level'));
-howButton.addEventListener('click', moveScreen('how'));
-homeButton.addEventListener('click', moveScreen('home'));
+levelButtonRef.addEventListener('click', moveScreen('level'));
+howButtonRef.addEventListener('click', moveScreen('how'));
+homeButtonRef.addEventListener('click', moveScreen('home'));
     
 /**Level Choice**/
 //each choice should load question bank and lead to game screen */
