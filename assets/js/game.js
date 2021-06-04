@@ -23,26 +23,29 @@ let questions = [];
 
 //---Event listeners to move between screens---//
 
-function levelScreenMove() {
-    homeScreen.classList.add("hide");
-    levelScreen.classList.remove("hide");
-    howScreen.classList.add("hide");
-};
+const moveScreen = (type) => {
+    switch(type){
+        case'level':
+            homeScreen.classList.add("hide");
+            levelScreen.classList.remove("hide");
+            howScreen.classList.add("hide");
+        break;
+        case 'how':
+            homeScreen.classList.add("hide");
+            evelScreen.classList.add("hide");
+            howScreen.classList.remove("hide");
+        break;
+        case 'home':
+            homeScreen.classList.remove("hide");
+            levelScreen.classList.add("hide");
+            howScreen.classList.add("hide");
+        default;
+        break;
+    }
+}
+
 levelButton.addEventListener('click', levelScreenMove);
-
-
-function howScreenMove() {
-    homeScreen.classList.add("hide");
-    levelScreen.classList.add("hide");
-    howScreen.classList.remove("hide");
-};
 howButton.addEventListener('click', howScreenMove);
-
-function homeScreenMove() {
-    homeScreen.classList.remove("hide");
-    levelScreen.classList.add("hide");
-    howScreen.classList.add("hide");
-};
 homeButton.addEventListener('click', homeScreenMove);
     
 /**Level Choice**/
