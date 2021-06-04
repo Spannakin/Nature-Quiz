@@ -3,7 +3,7 @@
 const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
-const homeScreenRef = document.gquerySelector(".home");
+const homeScreenRef = document.querySelector(".home");
 //--Buttons--//
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
@@ -39,7 +39,7 @@ const moveScreen = (type) => {
             homeScreen.classList.remove("hide");
             levelScreen.classList.add("hide");
             howScreen.classList.add("hide");
-        default;
+        default:
         break;
     }
 }
