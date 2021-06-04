@@ -1,9 +1,9 @@
 //---Game Screen setup---//
 //---Screens--//
-var levelScreen = document.getElementById("level-select");
-var gameScreen = document.getElementById("game");
-var howScreen = document.getElementById("how-to-play");
-var homeScreen = document.getElementsByClassName("home");
+const levelScreen = document.getElementById("level-select");
+const gameScreen = document.getElementById("game");
+const howScreen = document.getElementById("how-to-play");
+const homeScreen = document.getElementsByClassName("home");
 //--Buttons--//
 const levelButton = document.getElementById("level-select-button");
 const howButton = document.getElementById("how-to-button");
