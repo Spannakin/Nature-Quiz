@@ -1,10 +1,8 @@
 //---Game Screen setup---//
-//---Screens--//
 const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
 const homeScreenRef = document.querySelector(".home");
-//--Buttons--//
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
 const homeButtonRef = document.querySelector(".home-button");
@@ -18,8 +16,6 @@ let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
 let questions = [];
-
-//--Score--//
 
 //---Event listeners to move between screens---//
 
@@ -42,14 +38,14 @@ const moveScreen = (type) => {
         default:
         break;
     }
-}
+};
 
 levelButtonRef.addEventListener('click', moveScreen('level'));
 howButtonRef.addEventListener('click', moveScreen('how'));
 homeButtonRef.addEventListener('click', moveScreen('home'));
     
-/**Level Choice**/
-//each choice should load question bank and lead to game screen */
+//Level Choice
+//each choice should load question bank and lead to game screen 
 const fetchedEasyQuestions = fetchData(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
 fetchedEasyQuestions.then((data) => {
     questions = data.results.map(fetchedEasyQuestions => {
