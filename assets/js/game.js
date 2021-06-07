@@ -2,7 +2,7 @@
 const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
-const homeScreenRef = document.querySelector(".home");
+const homeScreenRef = document.querySelector("#home");
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
 const homeButtonRef = document.querySelector(".home-button");
@@ -28,7 +28,7 @@ const moveScreen = (type) => {
         break;
         case 'how':
             homeScreenRef.classList.add("hide");
-            evelScreenRef.classList.add("hide");
+            levelScreenRef.classList.add("hide");
             howScreenRef.classList.remove("hide");
         break;
         case 'home':
@@ -46,7 +46,7 @@ homeButtonRef.addEventListener('click', moveScreen('home'));
     
 //Level Choice
 //each choice should load question bank and lead to game screen 
-const fetchedEasyQuestions = fetchData(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
+const fetchedEasyQuestions = fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
 fetchedEasyQuestions.then((data) => {
     questions = data.results.map(fetchedEasyQuestions => {
         const easyFormattedQuestion = {
