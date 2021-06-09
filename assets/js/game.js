@@ -42,9 +42,9 @@ const moveScreen = (type) => {
     }
 };
 
-levelButtonRef.addEventListener('click', moveScreen('level'));
-howButtonRef.addEventListener('click', moveScreen('how'));
-homeButtonRef.addEventListener('click', moveScreen('home'));
+levelButtonRef.addEventListener('click', () => moveScreen('level'));
+howButtonRef.addEventListener('click', () => moveScreen('how'));
+homeButtonRef.addEventListener('click', () => moveScreen('home'));
     
 //Level Choice
 //each choice should load question bank and lead to game screen 
@@ -62,7 +62,7 @@ const formattedQuestion = (ListOfQuestions) => {
     questions = listOfQuestions.results.map((fetchedQuestions) => {
         const answerChoices = [... fetchedQuestions.incorrect_answers, FetchedQuestions.correct_answer];
         const shuffleQuestions = suffledArr(answerChoices);
-        answerChoices.splice(formattedQuestion.answer- 1, 0, loadedQuestion.correctAnswer);
+        answerChoices.splice(formattedQuestion.answer 1, 0, loadedQuestion.correctAnswer);
         answerChoices.forEach((choice, index) => {
             suffledAnswers['choice' + (index + 1)] = choice;
         });
