@@ -50,7 +50,7 @@ homeButtonRef.addEventListener('click', () => moveScreen('home'));
 //each choice should load question bank and lead to game screen 
 const fetchedQuestions = (difficulty) => {
     fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=${difficulty}&type=multiple`)
-    then.((data) => {
+    then((data) => {
         formattedQuestion(data)
     })
     .catch((err) => {
