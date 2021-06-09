@@ -19,6 +19,8 @@ let questions = [];
 
 //---Event listeners to move between screens---//
 
+choicesRef.forEach((choices) => choices.addEventListener('click', homeScreenRef));
+
 const moveScreen = (type) => {
     switch(type){
         case'level':
@@ -46,32 +48,26 @@ homeButtonRef.addEventListener('click', moveScreen('home'));
     
 //Level Choice
 //each choice should load question bank and lead to game screen 
-const fetchedEasyQuestions = fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
-fetchedEasyQuestions.then((data) => {
-    questions = data.results.map(fetchedEasyQuestions => {
-        const easyFormattedQuestion = {
-            question: fetchedEasyQuestions.question,
-        };
-     const answerChoices = [...fetchedEasyQuestions.incorrect_answers];
-            formattedEasyQuestion.answer = Math.floor(Math.random() * 5) + 1;
-            answerChoices.splice(
-                formattedQuestion.answer - 1,
-                0,
-                loadedQuestion.correct_answer
-            );
-
-            answerChoices.forEach((choice, index) => {
-                formattedEasyQuestion['choice' + (index + 1)] = choice;
-            });
-
-            return formattedEasyQuestion;
-        });
-         //startGame();----NEED TO MAKE THIS----
+const fetchedQuestions = (difficulty) => {
+    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=${difficulty}&type=multiple`)
+    then.((data) => {
+        formattedQuestion(data)
     })
     .catch((err) => {
         console.error(err);
     });
+};
 
+const formattedQuestion = (ListOfQuestions) => {
+    questions = listOfQuestions.results.map((fetchedQuestions) => {
+        const answerChoices = [... fetchedQuestions.incorrect_answers, FetchedQuestions.correct_answer];
+        const shuffleQuestions = suffledArr(answerChoices);
+        answerChoices.splice(formattedQuestion.answer- 1, 0, loadedQuestion.correctAnswer);
+        answerChoices.forEach((choice, index) => {
+            suffledAnswers['choice' + (index + 1)] = choice;
+        });
+    });
+};
 const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
 
 const fetchedHardQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple`);
