@@ -62,7 +62,7 @@ const formattedQuestion = (ListOfQuestions) => {
     questions = listOfQuestions.results.map((fetchedQuestions) => {
         const answerChoices = [... fetchedQuestions.incorrect_answers, FetchedQuestions.correct_answer];
         const shuffleQuestions = suffledArr(answerChoices);
-        answerChoices.splice(formattedQuestion.answer 1, 0, loadedQuestion.correctAnswer);
+        answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
         answerChoices.forEach((choice, index) => {
             suffledAnswers['choice' + (index + 1)] = choice;
         });
