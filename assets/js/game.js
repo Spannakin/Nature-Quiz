@@ -28,6 +28,12 @@ const moveScreen = (type) => {
             levelScreenRef.classList.remove("hide");
             howScreenRef.classList.add("hide");
         break;
+        case'game':
+            homeScreenRef.classList.add("hide");
+            levelScreenRef.classList.add("hide");
+            howScreenRef.classList.add("hide");
+            gameScreenRef.classList.remove("hide");
+        break;
         case 'how':
             homeScreenRef.classList.add("hide");
             levelScreenRef.classList.add("hide");
@@ -45,6 +51,10 @@ const moveScreen = (type) => {
 levelButtonRef.addEventListener('click', () => moveScreen('level'));
 howButtonRef.addEventListener('click', () => moveScreen('how'));
 homeButtonRef.addEventListener('click', () => moveScreen('home'));
+
+easyButtonRef.addEventListener('click', () => moveScreen('game'));
+medButtonRef.addEventListener('click', () => moveScreen('game'));
+hardButtonRef.addEventListener('click', () => moveScreen('game'));
     
 //Level Choice
 //each choice should load question bank and lead to game screen 
