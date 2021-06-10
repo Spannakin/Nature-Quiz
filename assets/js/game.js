@@ -81,7 +81,7 @@ const formattedQuestion = (ListOfQuestions) => {
         startGame();
     });
 
-    .catch((err) => {
+    //catch((err) => {
         console.error(err);
 };
 const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
@@ -90,6 +90,12 @@ const fetchedHardQuestions = (`https://opentdb.com/api.php?amount=10&category=17
 
 //---Game Question Setup--//
 // need to create and if/else for correct level question bank to load
+startGame = () => {
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
+
 
 //---Answer selection---//
 
