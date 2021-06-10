@@ -3,6 +3,7 @@ const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
 const homeScreenRef = document.querySelector("#home");
+const endScreenRef = document.querySelector("#end-screen")
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
 const homeButtonRef = document.querySelector(".home-button");
@@ -59,7 +60,7 @@ hardButtonRef.addEventListener('click', () => moveScreen('game'));
 //Level Choice
 //each choice should load question bank and lead to game screen 
 const fetchedQuestions = (difficulty) => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=${difficulty}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`)
     then((data) => {
         formattedQuestion(data)
     })
@@ -74,7 +75,7 @@ const formattedQuestion = (ListOfQuestions) => {
         const shuffleQuestions = suffledArr(answerChoices);
         answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
         answerChoices.forEach((choice, index) => {
-            suffledAnswers['choice' + (index + 1)] = choice;
+            suffledAnswers['choiceRef' + (index + 1)] = choice;
             return formattedQuestion;
         });
 
@@ -84,6 +85,9 @@ const formattedQuestion = (ListOfQuestions) => {
     //catch((err) => {
         console.error(err);
 };
+
+easyButtonRef.addEventListener('click', () => startGame());
+
 const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
 
 const fetchedHardQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple`);
@@ -96,7 +100,21 @@ startGame = () => {
     getNewQuestion();
 };
 
+getNewQuestion = () => {
+    //questionCounter++;
 
+    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    currentQuestion = availableQuesions[questionIndex];
+    questionRef.innerText = currentQuestion.question;
+
+    choicesRef.forEach((choice) => {
+        const number = choice.dataset['number'];
+        choicesRef.innerText = currentQuestion['choicesRef' + number];
+    });
+
+    availableQuesions.splice(questionIndex, 1);
+    acceptingAnswers = true;
+};
 //---Answer selection---//
 
 //---Correct/Incorrect Answer---//
