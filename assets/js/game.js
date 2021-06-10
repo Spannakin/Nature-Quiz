@@ -75,8 +75,14 @@ const formattedQuestion = (ListOfQuestions) => {
         answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
         answerChoices.forEach((choice, index) => {
             suffledAnswers['choice' + (index + 1)] = choice;
+            return formattedQuestion;
         });
+
+        startGame();
     });
+
+    .catch((err) => {
+        console.error(err);
 };
 const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
 
