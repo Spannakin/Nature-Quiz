@@ -28,22 +28,36 @@ const moveScreen = (type) => {
             homeScreenRef.classList.add("hide");
             levelScreenRef.classList.remove("hide");
             howScreenRef.classList.add("hide");
+            gameScreenRef.classList.add("hide");
+            endScreenRef.classList.add("hide");
         break;
         case'game':
             homeScreenRef.classList.add("hide");
             levelScreenRef.classList.add("hide");
             howScreenRef.classList.add("hide");
             gameScreenRef.classList.remove("hide");
+            endScreenRef.classList.add("hide");
         break;
         case 'how':
             homeScreenRef.classList.add("hide");
             levelScreenRef.classList.add("hide");
             howScreenRef.classList.remove("hide");
+            gameScreenRef.classList.add("hide");
+            endScreenRef.classList.add("hide");
+        break;
+        case 'end':
+            homeScreenRef.classList.add("hide");
+            levelScreenRef.classList.add("hide");
+            howScreenRef.classList.add("hide");
+            gameScreenRef.classList.add("hide");
+            endScreenRef.classList.remove("hide");
         break;
         case 'home':
             homeScreenRef.classList.remove("hide");
             levelScreenRef.classList.add("hide");
             howScreenRef.classList.add("hide");
+            gameScreenRef.classList.add("hide");
+            endScreenRef.classList.add("hide");
         default:
         break;
     }
