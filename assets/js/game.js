@@ -20,7 +20,7 @@ let questions = [];
 
 //---Event listeners to move between screens---//
 
-choicesRef.forEach((choices) => choices.addEventListener('click', homeScreenRef));
+choice.forEach((choices) => choices.addEventListener('click', homeScreenRef));
 
 const moveScreen = (type) => {
     switch(type){
@@ -74,30 +74,29 @@ hardButtonRef.addEventListener('click', () => moveScreen('game'));
 //Level Choice
 //each choice should load question bank and lead to game screen 
 const fetchedQuestions = (difficulty) => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`)
-    then((data) => {
-        formattedQuestion(data)
-    })
-    .catch((err) => {
-        console.error(err);
+    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
+    then((res) => {
+        return res.json();
     });
-};
 
 const formattedQuestion = (ListOfQuestions) => {
     questions = listOfQuestions.results.map((fetchedQuestions) => {
         const answerChoices = [... fetchedQuestions.incorrect_answers, FetchedQuestions.correct_answer];
         const shuffleQuestions = suffledArr(answerChoices);
         answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
+
         answerChoices.forEach((choice, index) => {
-            suffledAnswers['choices' + (index + 1)] = choice;
+            formattedQuestion['choices' + (index + 1)] = choice;
             return formattedQuestion;
         });
-
-        startGame();
     });
+};
 
-    //catch((err) => {
-        console.error(err);
+const suffledArr = (array) => {
+    return array
+    .map((a) => ({sort: Math.random(), value: a}))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
 };
 
 easyButtonRef.addEventListener('click', () => startGame());
@@ -116,9 +115,9 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    if (questions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //go to the end page
-    return window.location.assign("#home");
+    return moveScreen('home');
   }
   questionCounter++;
 
@@ -131,9 +130,12 @@ getNewQuestion = () => {
         choices.innerText = currentQuestion['choices' + number];
     });
 
-    availableQuesions.splice(questionIndex, 1);
+    questions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
+
+getNewQuestion('easy');
+}
 //---Answer selection---//
 
 //---Correct/Incorrect Answer---//
@@ -145,4 +147,3 @@ getNewQuestion = () => {
 
 //---Results---//
 // create alert that has messgae of success
-// option to play again?
