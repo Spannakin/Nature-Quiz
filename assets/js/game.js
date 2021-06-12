@@ -126,7 +126,7 @@ getNewQuestion = () => {
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    choicesRef.forEach((choice) => {
+    choices.forEach((choice) => {
         const number = choice.dataset['number'];
         choices.innerText = currentQuestion['choices' + number];
     });
