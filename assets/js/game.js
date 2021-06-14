@@ -13,14 +13,14 @@ const hardButtonRef = document.querySelector("#hard-button");
 //--Game--//
 const question = document.querySelector("#question");
 const choice = Array.from(document.querySelector(".answer-text"));
+const correct_bonus = 0;
+const max_questions = 5;
 let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
 let questions = [];
 
 //---Event listeners to move between screens---//
-
-choice.forEach((choices) => choices.addEventListener('click', homeScreenRef));
 
 const moveScreen = (type) => {
     switch(type){
@@ -68,74 +68,100 @@ howButtonRef.addEventListener('click', () => moveScreen('how'));
 homeButtonRef.addEventListener('click', () => moveScreen('home'));
 
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
+easyButtonRef.addEventListener('click', () => startGame());
 medButtonRef.addEventListener('click', () => moveScreen('game'));
+medButtonRef.addEventListener('click', () => startGame());
 hardButtonRef.addEventListener('click', () => moveScreen('game'));
+hardButtonRef.addEventListener('click', () => startGame());
     
 //Level Choice
-//each choice should load question bank and lead to game screen 
-const fetchedQuestions = (difficulty) => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple`);
-    then((res) => {
+//each choice should load question bank and lead to game screen
+
+fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
+.then((res) => {
         return res.json();
-    });
+    })
 
-const formattedQuestion = (ListOfQuestions) => {
-    questions = listOfQuestions.results.map((fetchedQuestions) => {
-        const answerChoices = [... fetchedQuestions.incorrect_answers, FetchedQuestions.correct_answer];
-        const shuffleQuestions = suffledArr(answerChoices);
-        answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
+.then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestion) => {
+            const formattedQuestion = {
+                question: loadedQuestion.question,
+            };
 
-        answerChoices.forEach((choice, index) => {
-            formattedQuestion['choices' + (index + 1)] = choice;
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestion.correct_answer
+            );
+
+            const suffledArr = (array) => {
+            return array
+            .map((a) => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort - b.sort)
+            .map((a) => a.value)
+        };
+
+            const shuffleQuestions = suffledArr(answerChoices);
+            answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
+
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index + 1)] = choice;
+            });
+
             return formattedQuestion;
         });
-    });
-};
 
-const suffledArr = (array) => {
-    return array
-    .map((a) => ({sort: Math.random(), value: a}))
-    .sort((a, b) => a.sort - b.sort)
-    .map((a) => a.value)
-};
+        startGame();
+    })
 
-easyButtonRef.addEventListener('click', () => startGame());
+    //.catch((err) => {
+       // console.error(err);
+//});
 
-const fetchedMedQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=medium&type=multiple`);
 
-const fetchedHardQuestions = (`https://opentdb.com/api.php?amount=10&category=17&difficulty=hard&type=multiple`);
-
-//---Game Question Setup--//
-// need to create and if/else for correct level question bank to load
 startGame = () => {
+    questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
 getNewQuestion = () => {
-    if (questions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-    //go to the end page
-    return moveScreen('home');
-  }
-  questionCounter++;
-
+    if (availableQuesions.length === 0 || questionCounter >= max_questions) {
+        //go to the end page
+        return moveScreen('home');
+    }
+    questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choices.innerText = currentQuestion['choices' + number];
+        choice.innerText = currentQuestion['choice' + number];
     });
 
-    questions.splice(questionIndex, 1);
+    availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
 
-getNewQuestion('easy');
-}
+choice.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        getNewQuestion();
+    });
+});
+
+startGame();
+
+
 //---Answer selection---//
 
 //---Correct/Incorrect Answer---//
