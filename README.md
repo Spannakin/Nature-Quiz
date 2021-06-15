@@ -166,12 +166,11 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### Testing
 
-#### ???
-   __???__
+#### Screen Movement
 
   * Plan
-
-
+  The plan was that by using JS the screens would move between the home view, the level choice, and the game screen.
+  
   * Implementation
 
      
@@ -226,4 +225,6 @@ https://yourgithubusername.github.io/your-repo-name
   * Youtube- James Q Quick
   * Youtube- DevEd
   * CI tutors & Simen
+  * parents
+  * Paul and Connie
 [Back to Top](#table-of-contents)
