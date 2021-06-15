@@ -142,14 +142,24 @@ choice.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
+
+        const classToApply = 'incorrect';
+        if(selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.remove(classToApply);
+        
         getNewQuestion();
     });
 });
 
 startGame();
 
-
 //---Answer selection---//
+
+
 
 //---Correct/Incorrect Answer---//
 // answer feedback- correct answer button turns green
