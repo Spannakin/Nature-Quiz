@@ -12,7 +12,7 @@ const medButtonRef = document.querySelector("#med-button");
 const hardButtonRef = document.querySelector("#hard-button"); 
 //--Game--//
 const question = document.querySelector("#question");
-const choice = Array.from(document.querySelector(".answer-text"));
+const choice = Array.from(document.querySelectorAll(".answer-text"));
 const correct_bonus = 0;
 const max_questions = 5;
 let currentQuestion = {};
@@ -95,18 +95,6 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
                 0,
                 loadedQuestion.correct_answer
             );
-
-            const suffledArr = (array) => {
-            return array
-            .map((a) => ({sort: Math.random(), value: a}))
-            .sort((a, b) => a.sort - b.sort)
-            .map((a) => a.value)
-        };
-
-            const shuffleQuestions = suffledArr(answerChoices);
-            answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correctAnswer);
-
-
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
             });
@@ -134,7 +122,6 @@ getNewQuestion = () => {
         //go to the end page
         return moveScreen('home');
     }
-    questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
