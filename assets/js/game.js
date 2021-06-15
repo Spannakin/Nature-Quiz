@@ -13,7 +13,7 @@ const hardButtonRef = document.querySelector("#hard-button");
 //--Game--//
 const question = document.querySelector("#question");
 const choice = Array.from(document.querySelectorAll(".answer-text"));
-const correct_bonus = 0;
+const correct_bonus = 10;
 const max_questions = 5;
 const scoreText = document.querySelector('#score');
 let currentQuestion = {};
@@ -46,13 +46,13 @@ const moveScreen = (type) => {
             gameScreenRef.classList.add("hide");
             endScreenRef.classList.add("hide");
         break;
-        case 'end':
-            homeScreenRef.classList.add("hide");
-            levelScreenRef.classList.add("hide");
-            howScreenRef.classList.add("hide");
-            gameScreenRef.classList.add("hide");
-            endScreenRef.classList.remove("hide");
-        break;
+        //case 'end':
+          //  homeScreenRef.classList.add("hide");
+            //levelScreenRef.classList.add("hide");
+            //howScreenRef.classList.add("hide");
+            //gameScreenRef.classList.add("hide");
+            //endScreenRef.classList.remove("hide");
+        //break;
         case 'home':
             homeScreenRef.classList.remove("hide");
             levelScreenRef.classList.add("hide");
@@ -123,6 +123,7 @@ getNewQuestion = () => {
         //go to the end page
         return moveScreen('home');
     }
+    questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
