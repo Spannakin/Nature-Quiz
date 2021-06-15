@@ -77,7 +77,7 @@ hardButtonRef.addEventListener('click', () => startGame());
 //Level Choice
 //each choice should load question bank and lead to game screen
 
-fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=${easy}&type=multiple')
+fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=${difficulty}&type=multiple')
 .then((res) => {
         return res.json();
     })
