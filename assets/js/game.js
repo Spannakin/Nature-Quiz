@@ -77,7 +77,7 @@ hardButtonRef.addEventListener('click', () => startGame());
 //Level Choice
 //each choice should load question bank and lead to game screen
 
-fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
+fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=${easy}&type=multiple')
 .then((res) => {
         return res.json();
     })
@@ -120,7 +120,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
-        return moveScreen('end');
+        return moveScreen('home');
     }
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
@@ -143,27 +143,19 @@ choice.forEach((choice) => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
-        const classToApply = 'incorrect';
-        if(selectedAnswer == currentQuestion.answer) {
-            classToApply = 'correct';
-        }
-
-        selectedChoice.parentElement.classList.add(classToApply);
-        selectedChoice.parentElement.classList.remove(classToApply);
+        const classToApply =  selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         
-        getNewQuestion();
+
+        selectedChoice.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);  
     });
 });
 
 startGame();
-
-//---Answer selection---//
-
-
-
-//---Correct/Incorrect Answer---//
-// answer feedback- correct answer button turns green
-//answer feeback- button turns red
 
 //---Score Tracker---//
 //10 points per correct answer
