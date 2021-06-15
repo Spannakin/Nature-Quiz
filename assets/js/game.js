@@ -105,9 +105,9 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
         startGame();
     })
 
-    //.catch((err) => {
-       // console.error(err);
-//});
+    .catch((err) => {
+       console.error(err);
+});
 
 
 startGame = () => {
@@ -120,7 +120,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
-        return moveScreen('home');
+        return moveScreen('end');
     }
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
