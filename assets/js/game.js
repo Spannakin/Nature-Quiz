@@ -15,6 +15,7 @@ const question = document.querySelector("#question");
 const choice = Array.from(document.querySelectorAll(".answer-text"));
 const correct_bonus = 0;
 const max_questions = 5;
+const scoreText = document.querySelector('#score');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
@@ -145,9 +146,11 @@ choice.forEach((choice) => {
 
         const classToApply =  selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         
+        if (classToApply === 'correct') {
+            incrementScore(correct_bonus);
+        }
 
         selectedChoice.classList.add(classToApply);
-
         setTimeout(() => {
             selectedChoice.classList.remove(classToApply);
             getNewQuestion();
@@ -159,6 +162,11 @@ startGame();
 
 //---Score Tracker---//
 //10 points per correct answer
+
+incrementScore = (num) => {
+    score += num;
+    scoreText.innerText = score;
+};
 
 //---Results---//
 // create alert that has messgae of success
