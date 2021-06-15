@@ -12,7 +12,7 @@ html, body {
     font-family: 'KoHo', sans-serif;
     margin: 0;
     padding: 0;
-    color: #6096ba;
+    color: #a3cef1;
 }
 
 h1 {
@@ -57,6 +57,7 @@ h2 {
   text-align: center;
 }
 
+
 /* BUTTONS */
 
 .btn {
@@ -92,7 +93,7 @@ h2 {
 /*HUD*/
 #hud {
     display: flex;
-    justfify-content: right;
+    justfify-content: center;
 }
 
 .hud-prefix {
