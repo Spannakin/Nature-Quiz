@@ -6,7 +6,10 @@ const homeScreenRef = document.querySelector("#home");
 const endScreenRef = document.querySelector("#end-screen")
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
-const homeButtonRef = document.querySelector(".home-button");
+const homeButtonLevelRef = document.querySelectorAll("#homebutton-level");
+const homeButtonGameRef = document.querySelectorAll("#homebutton-game");
+const homeButtonHowRef = document.querySelectorAll("#homebutton-how");
+const homeButtonEndRef = document.querySelectorAll("#homebutton-end");
 const easyButtonRef = document.querySelector("#easy-button");
 const medButtonRef = document.querySelector("#med-button");
 const hardButtonRef = document.querySelector("#hard-button"); 
@@ -68,7 +71,11 @@ const moveScreen = (type) => {
 
 levelButtonRef.addEventListener('click', () => moveScreen('level'));
 howButtonRef.addEventListener('click', () => moveScreen('how'));
-homeButtonRef.addEventListener('click', () => moveScreen('home'));
+homeButtonLevelRef.addEventListener('click', () => moveScreen('home'));
+homeButtonGameRef.addEventListener('click', () => moveScreen('home'));
+homeButtonHowRef.addEventListener('click', () => moveScreen('home'));
+homeButtonEndRef.addEventListener('click', () => moveScreen('home'));
+console.log(homeButtonRef);
 
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
 easyButtonRef.addEventListener('click', () => startGame());
@@ -142,7 +149,7 @@ const endGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
-        return endGame();
+        //return endGame();
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
