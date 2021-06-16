@@ -17,6 +17,7 @@ const correct_bonus = 10;
 const max_questions = 5;
 const scoreText = document.querySelector('#score');
 const endScoreRef = document.querySelector('#end-score');
+let score = 0;
 let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
@@ -47,13 +48,6 @@ const moveScreen = (type) => {
             gameScreenRef.classList.add("hide");
             endScreenRef.classList.add("hide");
         break;
-        //case 'end':
-          //  homeScreenRef.classList.add("hide");
-            //levelScreenRef.classList.add("hide");
-            //howScreenRef.classList.add("hide");
-            //gameScreenRef.classList.add("hide");
-            //endScreenRef.classList.remove("hide");
-        //break;
         case 'home':
             homeScreenRef.classList.remove("hide");
             levelScreenRef.classList.add("hide");
