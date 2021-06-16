@@ -16,6 +16,7 @@ const choice = Array.from(document.querySelectorAll(".answer-text"));
 const correct_bonus = 10;
 const max_questions = 5;
 const scoreText = document.querySelector('#score');
+const endScoreRef = document.querySelector('#end-score');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let availableQuestions = [];
@@ -179,4 +180,17 @@ const endGame = () => {
     howScreenRef.classList.add("hide");
     gameScreenRef.classList.add("hide");
     endScreenRef.classList.remove("hide");
-}
+    endScoreRef.innerText = score + " / " + maximumScore;
+
+    if (score === (maximumQuestions * pointsCorrectAnswer)) {
+        endmessageRef.innerText = "Congratulations! A perfect score!";
+    } else if (score >= ((maximumQuestions / 5 * 4 ) * pointsCorrectAnswer)) {
+        endmessageRef.innerText = "Congratulations! Almost perfect!";
+    } else if (score > ((maximumQuestions / 2) * pointsCorrectAnswer)) {
+        endmessageRef.innerText = "Congratulations! That's better than most players!";
+    } else if (score >= ((maximumQuestions/5) * pointsCorrectAnswer)){
+        endmessageRef.innerText = "Not bad, try again and beat your own score!";
+    } else {
+        endmessageRef.innerText = "oh dear! Maybe you need to revise the subject.";
+    } 
+};
