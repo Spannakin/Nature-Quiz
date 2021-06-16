@@ -134,6 +134,8 @@ getNewQuestion = () => {
         //go to the end page
         endGame();
     }
+    console.log(1)
+    
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
@@ -170,8 +172,6 @@ choice.forEach((choice) => {
         }, 1000);  
     });
 });
-
-startGame();
 
 //Results/end screen//
 function endGame() {
