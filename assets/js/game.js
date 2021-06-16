@@ -121,7 +121,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
-        return moveScreen('home');
+        return endGame();
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -171,3 +171,12 @@ incrementScore = (num) => {
 
 //---Results---//
 // create alert that has messgae of success
+
+const endGame = () => {
+    const maxScore = maximumQuestions * pointsCorrectAnswer;
+    homeScreenRef.classList.add("hide");
+    levelScreenRef.classList.add("hide");
+    howScreenRef.classList.add("hide");
+    gameScreenRef.classList.add("hide");
+    endScreenRef.classList.remove("hide");
+}
