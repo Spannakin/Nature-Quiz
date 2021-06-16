@@ -41,6 +41,13 @@ const moveScreen = (type) => {
             gameScreenRef.classList.remove("hide");
             endScreenRef.classList.add("hide");
         break;
+        case 'end':
+            homeScreenRef.classList.add("hide");
+            levelScreenRef.classList.add("hide");
+            howScreenRef.classList.add("hide");
+            gameScreenRef.classList.add("hide");
+            endScreenRef.classList.remove("hide");
+        break;
         case 'how':
             homeScreenRef.classList.add("hide");
             levelScreenRef.classList.add("hide");
@@ -115,24 +122,20 @@ startGame = () => {
 
 
 const endGame = () => {
-    const maxScore = maximumQuestions * pointsCorrectAnswer;
-    homeScreenRef.classList.add("hide");
-    levelScreenRef.classList.add("hide");
-    howScreenRef.classList.add("hide");
-    gameScreenRef.classList.add("hide");
-    endScreenRef.classList.remove("hide");
-    endScoreRef.innerText = score + " / " + maximumScore;
+     moveScreen('end');
+    const maxScore = max_questions * correct_bonus;
+    endScoreRef.innerText = score + " / " + maxScore;
 
-    if (score === (maximumQuestions * pointsCorrectAnswer)) {
-        endmessageRef.innerText = "Congratulations! A perfect score!";
-    } else if (score >= ((maximumQuestions / 5 * 4 ) * pointsCorrectAnswer)) {
-        endmessageRef.innerText = "Congratulations! Almost perfect!";
-    } else if (score > ((maximumQuestions / 2) * pointsCorrectAnswer)) {
-        endmessageRef.innerText = "Congratulations! That's better than most players!";
-    } else if (score >= ((maximumQuestions/5) * pointsCorrectAnswer)){
-        endmessageRef.innerText = "Not bad, try again and beat your own score!";
+    if (score === (max_questions * correct_bonus)) {
+        endScoreRef.innerText = "Congratulations! A perfect score!";
+    } else if (score >= ((max_questions / 5 * 4 ) * correct_bonus)) {
+        endScoreRef.innerText = "Congratulations! Almost perfect!";
+    } else if (score > ((max_questions / 2) * correct_bonus)) {
+        endScoreRef.innerText = "Congratulations! That's better than most players!";
+    } else if (score >= ((max_questions/5) * correct_bonus)){
+        endScoreRef.innerText = "Not bad, try again and beat your own score!";
     } else {
-        endmessageRef.innerText = "oh dear! Maybe you need to revise the subject.";
+        endScoreRef.innerText = "oh dear! Maybe you need to revise the subject.";
     } 
 };
 
