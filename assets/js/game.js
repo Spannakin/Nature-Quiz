@@ -126,7 +126,7 @@ startGame = () => {
 
 
 const endGame = () => {
-     //moveScreen('end');
+     return moveScreen('end');
     const maxScore = max_questions * correct_bonus;
     endScoreRef.innerText = score + " / " + maxScore;
 
