@@ -6,10 +6,7 @@ const homeScreenRef = document.querySelector("#home");
 const endScreenRef = document.querySelector("#end-screen")
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
-const homeButtonLevelRef = document.querySelectorAll("#homebutton-level");
-const homeButtonGameRef = document.querySelectorAll("#homebutton-game");
-const homeButtonHowRef = document.querySelectorAll("#homebutton-how");
-const homeButtonEndRef = document.querySelectorAll("#homebutton-end");
+const homeButtonRef = document.querySelectorAll(".home-button");
 const easyButtonRef = document.querySelector("#easy-button");
 const medButtonRef = document.querySelector("#med-button");
 const hardButtonRef = document.querySelector("#hard-button"); 
@@ -71,11 +68,11 @@ const moveScreen = (type) => {
 
 levelButtonRef.addEventListener('click', () => moveScreen('level'));
 howButtonRef.addEventListener('click', () => moveScreen('how'));
-homeButtonLevelRef.addEventListener('click', () => moveScreen('home'));
-homeButtonGameRef.addEventListener('click', () => moveScreen('home'));
-homeButtonHowRef.addEventListener('click', () => moveScreen('home'));
-homeButtonEndRef.addEventListener('click', () => moveScreen('home'));
-console.log(homeButtonRef);
+
+ Array.from(homeButtonRef).forEach(function(homeButtonRef) {
+      homeButtonRef.addEventListener('click', () => moveScreen('home'));
+    });
+
 
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
 easyButtonRef.addEventListener('click', () => startGame());
@@ -129,7 +126,7 @@ startGame = () => {
 
 
 const endGame = () => {
-     moveScreen('end');
+     //moveScreen('end');
     const maxScore = max_questions * correct_bonus;
     endScoreRef.innerText = score + " / " + maxScore;
 
@@ -144,6 +141,11 @@ const endGame = () => {
     } else {
         endScoreRef.innerText = "oh dear! Maybe you need to revise the subject.";
     } 
+};
+
+incrementScore = (num) => {
+    score += num;
+    scoreText.innerText = score;
 };
 
 getNewQuestion = () => {
@@ -192,7 +194,4 @@ startGame();
 //---Score Tracker---//
 //10 points per correct answer
 
-incrementScore = (num) => {
-    score += num;
-    scoreText.innerText = score;
-};
+
