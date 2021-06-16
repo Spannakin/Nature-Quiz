@@ -73,7 +73,7 @@ howButtonRef.addEventListener('click', () => moveScreen('how'));
       homeButtonRef.addEventListener('click', () => moveScreen('home'));
     });
 
-
+//Level Selection
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
 easyButtonRef.addEventListener('click', () => startGame());
 medButtonRef.addEventListener('click', () => moveScreen('game'));
@@ -81,9 +81,7 @@ medButtonRef.addEventListener('click', () => startGame());
 hardButtonRef.addEventListener('click', () => moveScreen('game'));
 hardButtonRef.addEventListener('click', () => startGame());
     
-//Level Choice
-//each choice should load question bank and lead to game screen
-
+//Calling information from the API
 fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 .then((res) => {
         return res.json();
@@ -116,7 +114,7 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
        console.error(err);
 });
 
-
+//Start game function
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -124,7 +122,7 @@ startGame = () => {
     getNewQuestion();
 };
 
-
+//Results/end screen//
 const endGame = () => {
      return moveScreen('end');
     const maxScore = max_questions * correct_bonus;
@@ -142,12 +140,13 @@ const endGame = () => {
         endScoreRef.innerText = "oh dear! Maybe you need to revise the subject.";
     } 
 };
-
+//---Score Tracker---//
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
 };
 
+//Get new question function
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
@@ -167,6 +166,7 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+//Answer choices and selection
 choice.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
@@ -191,7 +191,6 @@ choice.forEach((choice) => {
 
 startGame();
 
-//---Score Tracker---//
-//10 points per correct answer
+
 
 
