@@ -151,7 +151,7 @@ incrementScore = (num) => {
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= max_questions) {
         //go to the end page
-        //return endGame();
+        return endGame();
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
