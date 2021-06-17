@@ -95,6 +95,7 @@ p {
 }
 
 /*HUD*/
+
 #hud {
     display: flex;
     justfify-content: center;
