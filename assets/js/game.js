@@ -17,7 +17,6 @@ const correct_bonus = 10;
 const max_questions = 5;
 const scoreText = document.querySelector('#score');
 const endScoreRef = document.querySelector('#end-score');
-let difficulty = {};
 let score = 0;
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -83,7 +82,7 @@ hardButtonRef.addEventListener('click', () => moveScreen('game'));
 hardButtonRef.addEventListener('click', () => startGame());
     
 //Calling information from the API
-fetch(`'https://opentdb.com/api.php?amount=10&category=17&difficulty=${difficulty}&type=multiple'`)
+fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 .then((res) => {
         return res.json();
     })
