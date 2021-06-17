@@ -125,7 +125,7 @@ startGame = () => {
 //---Score Tracker---//
 incrementScore = (num) => {
     score += num;
-    scoreText.innerText = score;
+    scoreTextRef.innerText = score;
 };
 
 //Get new question function
