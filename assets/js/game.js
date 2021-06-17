@@ -13,9 +13,9 @@ const hardButtonRef = document.querySelector("#hard-button");
 //--Game--//
 const question = document.querySelector("#question");
 const choice = Array.from(document.querySelectorAll(".answer-text"));
-const correct_bonus = 10;
-const max_questions = 5;
-const scoreText = document.querySelector('#score');
+const correctBonus = 10;
+const maxQuestions = 5;
+const scoreTextRef = document.querySelector('#score');
 const endScoreRef = document.querySelector('#end-score');
 let score = 0;
 let currentQuestion = {};
@@ -75,7 +75,7 @@ howButtonRef.addEventListener('click', () => moveScreen('how'));
 
 //Level Selection
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
-easyButtonRef.addEventListener('click', () => startGame(difficulty = 'easy'));
+easyButtonRef.addEventListener('click', () => startGame());
 medButtonRef.addEventListener('click', () => moveScreen('game'));
 medButtonRef.addEventListener('click', () => startGame());
 hardButtonRef.addEventListener('click', () => moveScreen('game'));
@@ -130,7 +130,7 @@ incrementScore = (num) => {
 
 //Get new question function
 getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= max_questions) {
+    if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
         //go to the end page
         endGame();
     }
@@ -161,7 +161,7 @@ choice.forEach((choice) => {
         const classToApply =  selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         
         if (classToApply === 'correct') {
-            incrementScore(correct_bonus);
+            incrementScore(correctBonus);
         }
 
         selectedChoice.classList.add(classToApply);
@@ -179,16 +179,16 @@ function endGame() {
     howScreenRef.classList.add("hide");
     gameScreenRef.classList.add("hide");
     endScreenRef.classList.remove("hide"); 
-    const maxScore = max_questions * correct_bonus;
+    const maxScore = maxQuestions * correctBonus;
     endScoreRef.innerText = score + " / " + maxScore;
 
-    if (score === (max_questions * correct_bonus)) {
+    if (score === (maxQuestions * correctBonus)) {
         endScoreRef.innerText = "Congratulations! A perfect score!";
-    } else if (score >= ((max_questions / 5 * 4 ) * correct_bonus)) {
+    } else if (score >= ((maxQuestions / 5 * 4 ) * correctBonus)) {
         endScoreRef.innerText = "Congratulations! Almost perfect!";
-    } else if (score > ((max_questions / 2) * correct_bonus)) {
+    } else if (score > ((maxQuestions / 2) * correctBonus)) {
         endScoreRef.innerText = "Congratulations! That's better than most players!";
-    } else if (score >= ((max_questions/5) * correct_bonus)){
+    } else if (score >= ((maxQuestions/5) * correctBonus)){
         endScoreRef.innerText = "Not bad, try again and beat your own score!";
     } else {
         endScoreRef.innerText = "oh dear! Maybe you need to revise the subject.";
