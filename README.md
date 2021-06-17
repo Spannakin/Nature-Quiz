@@ -169,14 +169,20 @@ Thank you for visiting my project, if you have any questions or feedback please 
 #### Screen Movement
 
   * Plan
-  The plan was that by using JS the screens would move between the home view, the level choice, and the game screen.
+  
+    The plan was that by using JS the screens would move between the home view, the level choice, and the game screen.
   
   * Implementation
-
+   
+    The screen movement function turned out tricker to get working than expected, partly due to the home button for moving back to the home screen 
+    at various point during the game used a class element rather than an ID as such it required an additional step of being turned into an array for the function to fire at 
+    all stages rather than just the level page.
      
   * Test
+  
+    On initial testing the move screen function worked for all screens but only for the move back to the home screen from the level-screen, additionalsteps were added to the JS function 
+    to allow the home button to work at all stages of the game. After testing again the function now fully works allowing the user to navigate smoothly through the game.
 
-    
   * Result
 
     
@@ -189,7 +195,12 @@ Thank you for visiting my project, if you have any questions or feedback please 
 ---
 ### Bugs
 
-#### ???
+#### MoveScreen function
+
+#### Home Button
+
+#### End Screen appearing too soon
+
 
   
 [Back to Top](#table-of-contents)
