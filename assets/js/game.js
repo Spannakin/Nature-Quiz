@@ -134,7 +134,6 @@ getNewQuestion = () => {
         //go to the end page
         endGame();
     }
-    console.log(1)
     
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
