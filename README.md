@@ -181,11 +181,62 @@ Thank you for visiting my project, if you have any questions or feedback please 
   * Test
   
     On initial testing the move screen function worked for all screens but only for the move back to the home screen from the level-screen, additionalsteps were added to the JS function 
-    to allow the home button to work at all stages of the game. After testing again the function now fully works allowing the user to navigate smoothly through the game.
+    to allow the home button to work at all stages of the game. 
 
   * Result
 
+    After testing again the function now fully works allowing the user to navigate smoothly through the game.
     
+  * Verdict
+    
+    The move Screen function now works as expected and the user can navigate the game with ease.
+
+#### Quiz Questions and answers
+
+  * Plan
+
+  * Implementation
+
+  * Test
+
+  * Result
+
+  * Verdict
+
+#### Score counter
+
+  * Plan
+
+  * Implementation
+
+  * Test
+
+  * Result
+
+  * Verdict
+
+#### End Screen
+
+  * Plan
+
+  * Implementation
+
+  * Test
+
+  * Result
+
+  * Verdict
+
+#### Level Selection
+
+  * Plan
+
+  * Implementation
+
+  * Test
+
+  * Result
+
   * Verdict
 
      
