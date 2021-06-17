@@ -197,10 +197,14 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 #### MoveScreen function
 
+    Initially the MoveScreen was working sporadically for the move back to the home section, then the end screen began to appear first. the end screen was apprearing too soon due to an additioanl line of code that I had written
+    at the bottom of the sequence that was a duplicate and unneeded, once this line was removed the end screen now appears at the appropriate point in the game.
+
 #### Home Button
 
-#### End Screen appearing too soon
-
+    The home button was the cause of the glitch with the move screen function where the move back to the homse screen was not working on all the home buttons.
+    the home button was a class of button as it appears in multiple places as such I added an additional step where the buttons were moved into an array and then the function was called on each of them.
+    This was successful and the function now works at all locations.
 
   
 [Back to Top](#table-of-contents)
@@ -238,4 +242,6 @@ https://yourgithubusername.github.io/your-repo-name
   * CI tutors & Simen
   * parents
   * Paul and Connie
+  * My family
+
 [Back to Top](#table-of-contents)
