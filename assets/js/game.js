@@ -1,4 +1,4 @@
-//---Game Screen setup---//
+
 const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
@@ -10,12 +10,11 @@ const homeButtonRef = document.querySelectorAll(".home-button");
 const easyButtonRef = document.querySelector("#easy-button");
 const medButtonRef = document.querySelector("#med-button");
 const hardButtonRef = document.querySelector("#hard-button"); 
-//--Game--//
 const question = document.querySelector("#question");
 const choice = Array.from(document.querySelectorAll(".answer-text"));
 const correctBonus = 10;
 const maxQuestions = 5;
-const scoreTextRef = document.querySelector('.score');
+const scoreTextRef = document.querySelectorAll('.score');
 const endScoreRef = document.querySelector('#end-score');
 let score = 0;
 let currentQuestion = {};
