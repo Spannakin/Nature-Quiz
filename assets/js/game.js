@@ -125,7 +125,7 @@ startGame = () => {
 //---Score Tracker---//
 incrementScore = (num) => {
     score += num;
-    scoreTextRef.innerText = score;
+    scoreTextRef.innerHTML = score;
 };
 
 //Get new question function
@@ -138,11 +138,11 @@ getNewQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question;
+    question.innerHTML = currentQuestion.question;
 
     choice.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
+        choice.innerHTML = currentQuestion['choice' + number];
     });
 
     availableQuesions.splice(questionIndex, 1);
@@ -180,18 +180,18 @@ function endGame() {
     gameScreenRef.classList.add("hide");
     endScreenRef.classList.remove("hide"); 
     const maxScore = maxQuestions * correctBonus;
-    endScoreRef.innerText = score + " / " + maxScore;
+    endScoreRef.innerHTML = score + " / " + maxScore;
 
     if (score === (maxQuestions * correctBonus)) {
-        endScoreRef.innerText = "Congratulations! A perfect score!";
+        endScoreRef.innerHTML = "Congratulations! A perfect score!";
     } else if (score >= ((maxQuestions / 5 * 4 ) * correctBonus)) {
-        endScoreRef.innerText = "Congratulations! Almost perfect!";
+        endScoreRef.innerHTML = "Congratulations! Almost perfect!";
     } else if (score > ((maxQuestions / 2) * correctBonus)) {
-        endScoreRef.innerText = "Congratulations! That's better than most players!";
+        endScoreRef.innerHTML = "Congratulations! That's better than most players!";
     } else if (score >= ((maxQuestions/5) * correctBonus)){
-        endScoreRef.innerText = "Not bad, try again and beat your own score!";
+        endScoreRef.innerHTML = "Not bad, try again and beat your own score!";
     } else {
-        endScoreRef.innerText = "oh dear! Maybe you need to revise the subject.";
+        endScoreRef.innerHTML = "oh dear! Maybe you need to revise the subject.";
     } 
 };
 
