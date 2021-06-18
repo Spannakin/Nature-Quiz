@@ -99,7 +99,7 @@ p {
 
 #hud {
     display: flex;
-    justfify-content: center;
+    justify-content: center;
 }
 
 .hud-prefix {
