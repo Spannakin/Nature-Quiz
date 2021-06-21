@@ -1,4 +1,3 @@
-
 const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
@@ -22,7 +21,10 @@ let acceptingAnswers = false;
 let availableQuestions = [];
 let questions = [];
 
-//---Event listeners to move between screens---//
+/**
+ * Event listeners to move between screens
+ * @ param type
+ * */
 
 const moveScreen = (type) => {
     switch(type){
@@ -72,7 +74,6 @@ howButtonRef.addEventListener('click', () => moveScreen('how'));
       homeButtonRef.addEventListener('click', () => moveScreen('home'));
     });
 
-//Level Selection
 easyButtonRef.addEventListener('click', () => moveScreen('game'));
 easyButtonRef.addEventListener('click', () => startGame());
 medButtonRef.addEventListener('click', () => moveScreen('game'));
@@ -80,14 +81,33 @@ medButtonRef.addEventListener('click', () => startGame());
 hardButtonRef.addEventListener('click', () => moveScreen('game'));
 hardButtonRef.addEventListener('click', () => startGame());
     
-//Calling information from the API
+/*Calling information 
+* from the API
+*/
+
+const getAPIData = () => {
 fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 .then((res) => {
         return res.json();
     })
 
 .then((loadedQuestions) => {
-        questions = loadedQuestions.results.map((loadedQuestion) => {
+        formatQuestions(loadedQuestions)
+        });
+    }
+    
+.then(() => {startGame()
+})
+    .catch((err) => {
+       console.error(err);
+});
+
+
+/*Format Question
+* data from API fomatted for quiz
+*/
+const formatQusetions = (listOfQuestions) => {
+    questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
@@ -104,16 +124,11 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
             });
 
             return formattedQuestion;
-        });
-
-        startGame();
-    })
-
-    .catch((err) => {
-       console.error(err);
 });
+getAPIData();
 
-//Start game function
+/* Start game function */
+
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -193,4 +208,4 @@ function endGame() {
         endScoreRef.innerHTML = "oh dear! Maybe you need to revise the subject.";
     } 
 };
-
+}
