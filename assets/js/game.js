@@ -70,7 +70,7 @@ const moveScreen = (type) => {
 levelButtonRef.addEventListener('click', () => moveScreen('level'));
 howButtonRef.addEventListener('click', () => moveScreen('how'));
 
- Array.from(homeButtonRef).forEach(function(homeButtonRef) {
+Array.from(homeButtonRef).forEach(function(homeButtonRef) {
       homeButtonRef.addEventListener('click', () => moveScreen('home'));
     });
 
@@ -137,7 +137,7 @@ incrementScore = (num) => {
 
 /*Get new question function */
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
         //go to the end page
         endGame();
@@ -155,11 +155,13 @@ getNewQuestion = () => {
 
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
+    gameAnswers();
 };
 
 /*Answer choices and selection */
 
-choice.forEach((choice) => {
+const gameAnswers = () => {
+    choice.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
 
@@ -180,6 +182,9 @@ choice.forEach((choice) => {
         }, 1000);  
     });
 });
+
+}
+
 
 /*Results/end screen*/
 
