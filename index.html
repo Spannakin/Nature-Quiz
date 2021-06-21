@@ -13,15 +13,19 @@
 <body>
     <!--Welcome Screen--> 
     <section class="container flex-center flex-column" id="home">
+        <div class="box">
         <h1>Welcome to Quizlette</h1>
         <h2>Test your science and nature knowledge</h2>
+        </div>
         <a class="btn level-select-button" href="#level-select" id="level-select-button">Play Game</a>
         <a class="btn instructions-button" href="#how-to-play" id="how-to-button">How to play</a>
     </section>
     <!--Level selection-->
     <section class="container justify-center flex-column hide" id="level-select">
+        <div class="box">
         <h1 class="game-title">Quizlette</h1>
         <h2 class="question">What level would you like?</h2>
+        </div>
              <div class="choices-container">
                 <a class="btn easy-game" href="#game" id="easy-button">Easy</a>
                 <a class=" btn med-game" href="#game" id="med-button">Medium</a>
@@ -38,7 +42,9 @@
                     <h1 class="hud-main-text score">0</h1>
                 </div>
             </div>
-            <h2 id="question">Answer Question?</h2>
+            <div class="box">
+                <h2 id="question">Answer Question?</h2>
+            </div>
                 <div class="choices-container">
                 <p class="btn answer-text" data-number="1">Answer A</p>
                 <p class=" btn answer-text" data-number="2">Answer B</p>
@@ -49,20 +55,24 @@
     </section>
     <!--End Screen-->
     <section class="container justify-center flex-column hide" id="end-screen">
+            <div class="box">
             <h1 class="game-title">Quizlette</h1>
             <h2 class="score">0</h2>
                 <div class="choices-container">
                 <p id="end-score"> " "</p>
                 </div>
+            </div>
             <a class="btn home-button" href="#home" id="homebutton-end">Home</a>
     </section>
     <!--How to play-->
     <section class="container justify-center flex-column hide" id="how-to-play">
+            <div class="box">
             <h2>How to Play</h2>
             <p class="play-text">
             To play Quizlette select play game you will then be directed to the game screen where you will see a question with four possible answers.
             choose your answer by clicking on your choice. You will see 5 questions  a the end you will be able to see you score, then choose to play again or return to the home screen.
             </p>
+            </div>
             <a class="btn home-button" href="#home" id="homebutton-how">Home</a>
     </section>
     
