@@ -87,15 +87,8 @@ hardButtonRef.addEventListener('click', () => startGame());
 
 const getAPIData = () => {
 fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
-.then((res) => {
-        return res.json();
-    })
-
-.then((loadedQuestions) => {
-        formatQuestions(loadedQuestions)
-        });
-    }
-
+.then((res) => res.json())
+.then((loadedQuestions) => formatQuestions(loadedQuestions))
 .then(() => startGame())
     .catch((err) => {
        console.error(err);
