@@ -196,7 +196,7 @@ function endGame() {
     endScreenRef.classList.remove("hide"); 
     
     const maxScore = maxQuestions * correctBonus;
-    endScoreRef.innerHTML = score + " / " + maxScore;
+    endScoreRef.innerHTML = `${score} /${maxScore}`;
 
     if (score === (maxQuestions * correctBonus)) {
         endScoreRef.innerHTML = "Congratulations! A perfect score!";
@@ -210,4 +210,3 @@ function endGame() {
         endScoreRef.innerHTML = "oh dear! Maybe you need to revise the subject.";
     } 
 };
-}
