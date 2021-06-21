@@ -144,14 +144,15 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 * HTML
 * CSS
-* Java Script
-* jquery
+* Javascript
+
 
 #### Libraries & Frameworks
 * [Font Awesome](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [Boot Strap](https://getbootstrap.com/)
 * [Coolors](https://coolors.co/)
+* [jQuery](https://jquery.com)
 
 #### Technologies
 
@@ -276,8 +277,8 @@ https://yourgithubusername.github.io/your-repo-name
 
 ### Credits
 
-  * Youtube- James Q Quick
-  * Youtube- DevEd
+  * [James Q Quick](https://www.youtube.com/c/jamesqquick)
+  * [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
   * CI tutors & Simen
   * parents
   * Paul and Connie

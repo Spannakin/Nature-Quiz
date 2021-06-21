@@ -86,7 +86,7 @@ hardButtonRef.addEventListener('click', () => startGame());
 */
 
 const getAPIData = () => {
-fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
+    fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 .then((res) => res.json())
 .then((loadedQuestions) => formatQuestions(loadedQuestions))
 .then(() => startGame())
@@ -98,6 +98,7 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
 /*Format Question
 * data from API fomatted for quiz
 */
+
 const formatQusetions = (listOfQuestions) => {
     questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
@@ -183,7 +184,6 @@ const gameAnswers = () => {
         }, 1000);  
     });
 });
-
 }
 
 
