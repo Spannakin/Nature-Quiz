@@ -118,10 +118,11 @@ const formatQusetions = (listOfQuestions) => {
             return formattedQuestion;
 });
 getAPIData();
+startGame();
 
 /* Start game function */
 
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
@@ -208,5 +209,5 @@ function endGame() {
         endScoreRef.innerHTML = "Not bad, try again and beat your own score!";
     } else {
         endScoreRef.innerHTML = "oh dear! Maybe you need to revise the subject.";
-    } 
-};
+    }
+}
