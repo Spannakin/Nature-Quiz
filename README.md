@@ -46,8 +46,8 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 * As a user, I want to be able to easily navigate the site.
 * As a user, I want ro be able to see my score.
-* As a user I expect the different gaame pages to have a cohesive design and layout.
-* 
+* As a user I expect the different game pages to have a cohesive design and layout.
+
 
 
 [Back to Top](#table-of-contents)
@@ -73,6 +73,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 * Overview
 
    I wanted to keep the design clean and simple for the user to focus on the game.
+   Unlimately I had to choose a different background image as the original was too busy and made it difficult for thuser to read questions and navigate the game.
 
 * Fonts
 
@@ -166,7 +167,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### Testing
 
-#### Screen Movement
+#### As a user, I want to be able to easily navigate the site.
 
   * Plan
   
@@ -191,7 +192,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
     
     The move Screen function now works as expected and the user can navigate the game with ease.
 
-#### Quiz Questions and answers
+#### As a user I expect the different game pages to have a cohesive design and layout.
 
   * Plan
 
@@ -203,7 +204,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
   * Verdict
 
-#### Score counter
+#### As a user, I want ro be able to see my score.
 
   * Plan
 
@@ -215,7 +216,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
   * Verdict
 
-#### End Screen
+#### To test their knowledge of science and nature.
 
   * Plan
 
@@ -226,20 +227,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
   * Result
 
   * Verdict
-
-#### Level Selection
-
-  * Plan
-
-  * Implementation
-
-  * Test
-
-  * Result
-
-  * Verdict
-
-     
+  
   
 [Back to Top](#table-of-contents)
 
