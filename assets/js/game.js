@@ -9,7 +9,8 @@ const homeButtonRef = document.querySelectorAll(".home-button");
 const easyButtonRef = document.querySelector("#easy-button");
 const medButtonRef = document.querySelector("#med-button");
 const hardButtonRef = document.querySelector("#hard-button");
-const scoreTextRef = document.querySelectorAll('.score');
+const scoreRef = document.querySelector('#score');
+const finalScoreTextRef = document.querySelector('#final-score');
 const endScoreRef = document.querySelector('#end-score'); 
 const question = document.querySelector("#question");
 const choice = Array.from(document.querySelectorAll(".answer-text"));
@@ -80,11 +81,10 @@ medButtonRef.addEventListener('click', () => moveScreen('game'));
 medButtonRef.addEventListener('click', () => startGame());
 hardButtonRef.addEventListener('click', () => moveScreen('game'));
 hardButtonRef.addEventListener('click', () => startGame());
-    
+
 /*Calling information 
 * from the API
 */
-
 const getAPIData = () => {
     fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple')
 .then((res) => res.json())
@@ -92,14 +92,15 @@ const getAPIData = () => {
 .then(() => startGame())
     .catch((err) => {
        console.error(err);
-});
-
+    });
+}
 
 /*Format Question
 * data from API fomatted for quiz
+* @ param loadedQuestions
 */
 
-const formatQusetions = (listOfQuestions) => {
+const formatQuestions = (loadedQuestions) => {
     questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
                 question: loadedQuestion.question,
@@ -107,35 +108,14 @@ const formatQusetions = (listOfQuestions) => {
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
             formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-            answerChoices.splice(
-                formattedQuestion.answer - 1,
-                0,
-                loadedQuestion.correct_answer
-            );
+            answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
             });
-
             return formattedQuestion;
-});
+    });
+}
 getAPIData();
-startGame();
-
-/* Start game function */
-
-const startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...questions];
-    getNewQuestion();
-};
-
-/* Score tracker function */
-
-incrementScore = (num) => {
-    score += num;
-    scoreTextRef.innerHTML = score;
-};
 
 /*Get new question function */
 
@@ -183,9 +163,24 @@ const gameAnswers = () => {
             getNewQuestion();
         }, 1000);  
     });
-});
-}
+    });   
+};
 
+/* Start game function */
+
+const startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuesions = [...questions];
+    getNewQuestion();
+};
+
+/* Score tracker function */
+
+incrementScore = (num) => {
+    score += num;
+    scoreRef.innerHTML = score;
+};
 
 /*Results/end screen*/
 
@@ -197,7 +192,7 @@ function endGame() {
     endScreenRef.classList.remove("hide"); 
     
     const maxScore = maxQuestions * correctBonus;
-    endScoreRef.innerHTML = `${score} /${maxScore}`;
+    finalScoreTextRef.innerHTML = `${score} /${maxScore}`;
 
     if (score === (maxQuestions * correctBonus)) {
         endScoreRef.innerHTML = "Congratulations! A perfect score!";
@@ -209,5 +204,5 @@ function endGame() {
         endScoreRef.innerHTML = "Not bad, try again and beat your own score!";
     } else {
         endScoreRef.innerHTML = "oh dear! Maybe you need to revise the subject.";
-    }
+    };
 }
