@@ -35,14 +35,15 @@
     </section>
     <!--Game Play-->
     <section class="container justify-center flex-column hide" id="game">
+            <div class="box">
                 <div id="hud-item">
                     <h1 class="game-title">Quizlette</h1>
                     <div id="hud">
                     <p class="hud-prefix">Score</p>
-                    <h1 class="hud-main-text score">0</h1>
+                    <h1 class="hud-main-text" id="score">0</h1>
                 </div>
             </div>
-            <div class="box">
+            
                 <h2 id="question">Answer Question?</h2>
             </div>
                 <div class="choices-container">
@@ -57,7 +58,7 @@
     <section class="container justify-center flex-column hide" id="end-screen">
             <div class="box">
             <h1 class="game-title">Quizlette</h1>
-            <h2 class="score">0</h2>
+            <h2 id="final-score">0</h2>
                 <div class="choices-container">
                 <p id="end-score"> " "</p>
                 </div>
