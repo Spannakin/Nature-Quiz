@@ -95,9 +95,8 @@ fetch('https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=mu
         formatQuestions(loadedQuestions)
         });
     }
-    
-.then(() => {startGame()
-})
+
+.then(() => startGame())
     .catch((err) => {
        console.error(err);
 });
@@ -136,13 +135,15 @@ startGame = () => {
     getNewQuestion();
 };
 
-//---Score Tracker---//
+/* Score tracker function */
+
 incrementScore = (num) => {
     score += num;
     scoreTextRef.innerHTML = score;
 };
 
-//Get new question function
+/*Get new question function */
+
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
         //go to the end page
@@ -163,7 +164,8 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
-//Answer choices and selection
+/*Answer choices and selection */
+
 choice.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
@@ -186,13 +188,15 @@ choice.forEach((choice) => {
     });
 });
 
-//Results/end screen//
+/*Results/end screen*/
+
 function endGame() {
     homeScreenRef.classList.add("hide");
     levelScreenRef.classList.add("hide");
     howScreenRef.classList.add("hide");
     gameScreenRef.classList.add("hide");
     endScreenRef.classList.remove("hide"); 
+    
     const maxScore = maxQuestions * correctBonus;
     endScoreRef.innerHTML = score + " / " + maxScore;
 
