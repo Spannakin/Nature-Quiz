@@ -236,7 +236,7 @@ as well as showing on the end screen.
 
 The results screen can be seen in the below image showing the end score and a message for the player.
 
-![Score screen showing results](..assets/images/score-screen.png)
+![Score screen showing results](assets/images/scoreScreen.png)
    
   * Verdict
 
@@ -262,7 +262,7 @@ This was tested by playing the game multiple times to ensure that the questions 
 
 The quiz now pulls the questions and answers from the API and the text shows correctly for the user to easily read.
 
-![game screen](assets/images/game-screen.png)
+![game screen](assets/images/gameScreen.png)
 
   * Verdict
   
