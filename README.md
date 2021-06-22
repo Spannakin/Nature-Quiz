@@ -174,6 +174,8 @@ subtle and added the interest but the game was still easily playable for the use
 
 ### Testing
 
+HTML, CSS and Javascript passed validation tests.
+
 #### As a user, I want to be able to easily navigate the site.
 
   * Plan
