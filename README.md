@@ -2,7 +2,7 @@
 How well do you know science and nature?
 
 Take the quiz and find out!
-A small web quiz to test your knowledge of  science and nature, just for fun.
+A small web quiz to test your knowledge of science and nature, just for fun.
 
 Thank you for visiting my project, if you have any questions or feedback please head over to my Github contacts and get in touch.
 
@@ -32,20 +32,20 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 ### Site Owner Goals
 * A small easy to use quiz that will test users knowledge of science and nature.
-* To be enganging to users and will encourage them to come back again to see if they have improved.
+* To be engaging to users and will encourage them to come back again to see if they have improved.
 * The site is easy to navigate and simple to use.
 * The site is aesthetically pleasing.
 
 [Back to Top](#table-of-contents)
 
 ### User Goals
-* To have a fun expreience learning new facts.
+* To have a fun experience learning new facts.
 * To test their knowledge of science and nature.
 
 ### User Stories
 
 * As a user, I want to be able to easily navigate the site.
-* As a user, I want ro be able to see my score.
+* As a user, I want to be able to see my score.
 * As a user I expect the different game pages to have a cohesive design and layout.
 
 
@@ -73,12 +73,12 @@ Thank you for visiting my project, if you have any questions or feedback please 
 * Overview
 
    I wanted to keep the design clean and simple for the user to focus on the game.
-   Unlimately I had to choose a different background image as the original was too busy and made it difficult for thuser to read questions and navigate the game.
+   Unltimately I had to choose a different background image as the original was too busy and made it difficult for the user to read questions and navigate the game.
 
 * Fonts
 
    I used [Google Fonts](https://fonts.google.com/ "Google Fonts") to select the fonts used on the site.
-   The fonts I chose were [KoHo](https://fonts.google.com/specimen/KoHo?query=koho "KoHo") for the main text to be used on the site and [Rock Salt](https://fonts.google.com/specimen/Rock+Salt?query=Rock+Salt "Rock Salt") for the text on the welcomepage as it
+   The fonts I chose were [KoHo](https://fonts.google.com/specimen/KoHo?query=koho "KoHo") for the main text to be used on the site and [Rock Salt](https://fonts.google.com/specimen/Rock+Salt?query=Rock+Salt "Rock Salt") for the text on the welcome page as it
    has a softer feel and is more visually welcoming.
    
 * Icons
@@ -96,7 +96,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
   * #A3CEF1- is a cloud blue this will be used for borders and highlighting
   * #8B8C89- is a dove grey this will be used at the main text color as it contrasts well with the blue colors
 
-A new text color of #5f788d was chosen to replace the initial dove grey as on testing it was fund to be not eas easy to read as hoped so a new color was selected for better contrast and readability for user.
+A new text color of #5f788d was chosen to replace the initial dove grey as on testing it was found not to be as easy to read as hoped so a new color was selected for better contrast and readability for user.
 
 
 [Back to Top](#table-of-contents)
@@ -122,7 +122,7 @@ A new text color of #5f788d was chosen to replace the initial dove grey as on te
 [Back to Top](#table-of-contents)
 
 In my initial design I was planning to keep the background as one solid color so as not to detract from the game play but when running the game it was not visually appealing
-as such I then chose to use an image as the background but this was too busy and made reading the text difficult so I finally chose an illustrated wallpaper design as the coors wer more 
+as such I then chose to use an image as the background but this was too busy and made reading the text difficult so I finally chose an illustrated wallpaper design as the colors were more 
 subtle and added the interest but the game was still easily playable for the user.
 
 ---
@@ -132,13 +132,13 @@ subtle and added the interest but the game was still easily playable for the use
 * Use of [Open Trivia API](https://opentdb.com/ "Open Trivia")
 * Validation of answers
 * Ability to see score
-* Results sreen with message at end of game
+* Results screen with message at end of game
 
 #### Features to be implemented
 
-* More topics to be added- to make game moe specific, eg. mammals, birds, reptiles, etc.
+* More topics to be added- to make game more specific, eg. mammals, birds, reptiles, etc.
 * Ability to record high score to compete against
-* The choice of difficlty of questions
+* The choice of difficulty of questions
 * The ability to share your score on social media
 
 [Back to Top](#table-of-contents)
@@ -188,7 +188,7 @@ subtle and added the interest but the game was still easily playable for the use
      
   * Test
   
-    On initial testing the move screen function worked for all screens but only for the move back to the home screen from the level-screen, additionalsteps were added to the JS function 
+    On initial testing the move screen function worked for all screens but only for the move back to the home screen from the level-screen, additional steps were added to the JS function 
     to allow the home button to work at all stages of the game. 
 
   * Result
@@ -206,12 +206,12 @@ subtle and added the interest but the game was still easily playable for the use
 The plan was to give all the pages the same background and layout so that the game felt joined up and smooth.
 
   * Implementation
-Whilst writting the HTML fot the quiz I tried to replicate the placement and layout of the elements with in each section so that buttons were in the same place on each screen.
-For example the 'Home' button wich appears in multiple places is always at the bottom of the screen. The color scheme is the same through out the game as well as the background image remaining the same to keep the feel of the game uniform.
+Whilst writing the HTML for the quiz I tried to replicate the placement and layout of the elements with in each section so that buttons were in the same place on each screen.
+For example the 'Home' button which appears in multiple places is always at the bottom of the screen. The color scheme is the same through out the game as well as the background image remaining the same to keep the feel of the game uniform.
 
   * Test
 
-The different screens within the quiz all have a similar design and feel so the quiz works nicely as it move through the play stages.
+The different screens within the quiz all have a similar design and feel so the quiz works nicely as it moves through the play stages.
 
   * Result
 ![Home screen](assets/images/screenshots/homeScreen.png)
@@ -219,20 +219,20 @@ The different screens within the quiz all have a similar design and feel so the 
 
   * Verdict
 
-As you can see from the screen shots above the design flows through the quiz keeing the asthetic going through out the game.
+As you can see from the screen shots above the design flows through the quiz keeping the asthetic going through out the game.
 I am happy with the design flow for this quiz.
 
-#### As a user, I want ro be able to see my score.
+#### As a user, I want to be able to see my score.
 
   * Plan
 To write a JS function that would increment the users score as hey were playing and then to 
-pass that score to the end screen where the user will recieve a tailoerd message depending upon thier score.
+pass that score to the end screen where the user will receieve a tailored message depending upon their score.
 
   * Implementation
 
 The score function to implement the score was added but I struggled to pass the score information to the end screen
-after some research and a littl trial and error as score was a class and it needed to be altered to an id for the 
-information to show in two seperate locations.
+after some research and a little trial and error as score was a class and it needed to be altered to an id for the 
+information to show in two separate locations.
 
   * Test
 
@@ -247,23 +247,23 @@ The results screen can be seen in the below image showing the end score and a me
    
   * Verdict
 
-The game score inciments as the user plays and passes to the end screen working as expected as you can see in the above screenshot.
+The game score incriments as the user plays and passes to the end screen working as expected as you can see in the above screenshot.
 
 #### To test their knowledge of science and nature.
 
   * Plan
 
-To use and API to porvide the user with questions relating to science and nature to test their knowledge.
+To use and API to provide the user with questions relating to science and nature to test their knowledge.
 
   * Implementation
 
-The API was acces via JS and the infomation converted and formatted to be playable in the game, providing 5 questions with m shuffled answers for the user to select from.
-Initially I had some issues with the question being pulled through but no answers as such I had to work on my code for the answers to pull through this was due to the my not linking the elements correctly.
+The API was access via JS and the information converted and formatted to be playable in the game, providing 5 questions with m shuffled answers for the user to select from.
+Initially I had some issues with the question being pulled through but no answers as such I had to work on my code for the answers to pull through this was due to my not linking the elements correctly.
 I also had initially set the text to show InnerText rather than InnerHTML which ment that some of the symbols were having trouble showing correctly this has also been corrected. 
 
   * Test
 
-This was tested by playing the game multiple times to ensure that the questions that were arring were appropriate and that hte functions wrt=itten worked correctly.
+This was tested by playing the game multiple times to ensure that the questions that were appearing were appropriate and that the functions written worked correctly.
 
   * Result
 
@@ -282,19 +282,19 @@ As you can see in the above screenshot the user can see questions and answers to
 
 #### MoveScreen function
 
-    Initially the MoveScreen was working sporadically for the move back to the home section, then the end screen began to appear first. the end screen was apprearing too soon due to an additioanl line of code that I had written
+    Initially the MoveScreen was working sporadically for the move back to the home section, then the end screen began to appear first. the end screen was appearing too soon due to an additional line of code that I had written
     at the bottom of the sequence that was a duplicate and unneeded, once this line was removed the end screen now appears at the appropriate point in the game.
 
 #### Home Button
 
-    The home button was the cause of the glitch with the move screen function where the move back to the homse screen was not working on all the home buttons.
+    The home button was the cause of the glitch with the move screen function where the move back to the home screen was not working on all the home buttons.
     the home button was a class of button as it appears in multiple places as such I added an additional step where the buttons were moved into an array and then the function was called on each of them.
     This was successful and the function now works at all locations.
 
 #### API not pulling the answer through
 
    The function to pull the information for quiz questions and answers was running but on the screen only the question was showing, this was because I hadn't fully linked the answers to the correct elements on the page.
-   This was quickly and easily fixed, the function now pulls through all the needed infromation.
+   This was quickly and easily fixed, the function now pulls through all the needed information.
 
   
 [Back to Top](#table-of-contents)
@@ -328,8 +328,8 @@ https://yourgithubusername.github.io/your-repo-name
 ### Credits
 
    The project has not been an easy one for me as Javascript has been quite challenging for me and I've needed quite a bit of support both in an actual sense from my Mentor Simen and also
-   fronm the tutors on tutor support, but also from my friends and family who have been brilliant cheerleaders when thing were not working and I couldn't see why.
-   I should also thank [James Q Quick](https://www.youtube.com/c/jamesqquick) and [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) as watching thier channels was very helpful
+   from the tutors on tutor support, but also from my friends and family who have been brilliant cheerleaders when thing were not working and I couldn't see why.
+   I should also thank [James Q Quick](https://www.youtube.com/c/jamesqquick) and [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) as watching their channels was very helpful
    for me getting to grips with Javascript.
    One final shout out to Paul and Connie, very good friends who have helped me think through my code and what I need to do to fix it.
 
