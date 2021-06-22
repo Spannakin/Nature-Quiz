@@ -120,6 +120,10 @@ Thank you for visiting my project, if you have any questions or feedback please 
 
 [Back to Top](#table-of-contents)
 
+In my initial design I was planning to keep the background as one solid color so as not to detract from the game play but when running the game it was not visually appealing
+as such I then chose to use an image as the background but this was too busy and made reading the text difficult so I finally chose an illustrated wallpaper design as the coors wer more 
+subtle and added the interest but the game was still easily playable for the user.
+
 ---
 
 ### Features 
@@ -281,7 +285,6 @@ https://yourgithubusername.github.io/your-repo-name
   * [James Q Quick](https://www.youtube.com/c/jamesqquick)
   * [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
   * CI tutors & Simen
-  * parents
   * Paul and Connie
   * My family
 
