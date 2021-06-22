@@ -95,7 +95,8 @@ Thank you for visiting my project, if you have any questions or feedback please 
   * #6096BA- is a sea blue, this will be the main background color
   * #A3CEF1- is a cloud blue this will be used for borders and highlighting
   * #8B8C89- is a dove grey this will be used at the main text color as it contrasts well with the blue colors
-
+   new text color #5f788d better contrast and readability for user.
+   new background chosen
 
 [Back to Top](#table-of-contents)
 
