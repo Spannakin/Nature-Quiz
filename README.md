@@ -257,7 +257,7 @@ Thank you for visiting my project, if you have any questions or feedback please 
 This project was deployed via GitHub by executing the following steps.
 After writing the code, committing and pushing it to GitHub:
 * Navigate to the repository on github and click **Settings**.
-* From there, go to the **Source section** within the Github Pages section.
+* From there, go to the **Pages**.
 * Select **master branch** on the dropdown menu, and click save.
 * Now the website is live on:
 ```
