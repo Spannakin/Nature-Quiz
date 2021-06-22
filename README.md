@@ -214,8 +214,8 @@ For example the 'Home' button wich appears in multiple places is always at the b
 The different screens within the quiz all have a similar design and feel so the quiz works nicely as it move through the play stages.
 
   * Result
-![Home screen](assets/images/screenshots/homeScreen)
-![How screen](assets/images/screenshots/howScreen)
+![Home screen](assets/images/screenshots/homeScreen.png)
+![How screen](assets/images/screenshots/howScreen.png)
 
   * Verdict
 
