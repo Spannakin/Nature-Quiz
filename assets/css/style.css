@@ -45,10 +45,13 @@ h2 {
 }
 
 p {
-    font-size: 250%;
+    font-size: 2rem;
     text-align: center;
 }
 
+#play-text {
+    font-size: 1.25rem;
+}
 .container {
     width: 100%;
     height: 100%; 
@@ -66,6 +69,10 @@ p {
     padding: 2rem;
     border-radius: 2rem;
     margin: 1rem;
+}
+
+#how-box{
+    padding-top: 3rem;
 }
 
 .flex-column {
@@ -86,8 +93,15 @@ p {
   text-align: center;
 }
 
-.score {
+#score {
     padding-left: 2rem;
+}
+
+#game-box {
+    background:#ffffffd5;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 0.5rem;
 }
 
 
@@ -125,12 +139,33 @@ p {
 
 /*HUD*/
 
-#hud {
-    display: flex;
-    justify-content: center;
-}
-
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
 }
+
+#game-title {
+    padding-bottom: 0.5rem;
+}
+
+#hud-item {
+    padding: none;
+}
+
+#hud {
+    display: flex;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+#hud-main-text {
+    padding: none;
+}
+
+@media screen and (max-width: 480px) {
+    #how-to-play {
+        padding-top: 10rem;
+    }
+}
+
+
