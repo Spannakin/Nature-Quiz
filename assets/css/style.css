@@ -149,7 +149,7 @@ p {
 }
 
 #hud-item {
-    padding: none;
+    padding: 0;
 }
 
 #hud {
@@ -159,7 +159,7 @@ p {
 }
 
 #hud-main-text {
-    padding: none;
+    padding: 0;
 }
 
 @media screen and (max-width: 480px) {
