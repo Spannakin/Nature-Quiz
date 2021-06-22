@@ -2,7 +2,7 @@ const levelScreenRef = document.querySelector("#level-select");
 const gameScreenRef = document.querySelector("#game");
 const howScreenRef = document.querySelector("#how-to-play");
 const homeScreenRef = document.querySelector("#home");
-const endScreenRef = document.querySelector("#end-screen")
+const endScreenRef = document.querySelector("#end-screen");
 const levelButtonRef = document.querySelector("#level-select-button");
 const howButtonRef = document.querySelector("#how-to-button");
 const homeButtonRef = document.querySelectorAll(".home-button");
@@ -93,7 +93,7 @@ const getAPIData = () => {
     .catch((err) => {
        console.error(err);
     });
-}
+};
 
 /*Format Question
 * data from API fomatted for quiz
@@ -114,7 +114,7 @@ const formatQuestions = (loadedQuestions) => {
             });
             return formattedQuestion;
     });
-}
+};
 getAPIData();
 
 /*Get new question function */
