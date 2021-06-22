@@ -203,7 +203,11 @@ subtle and added the interest but the game was still easily playable for the use
 
   * Plan
 
+The plan was to give all the pages the same background and layout so that the game felt joined up and smooth.
+
   * Implementation
+Whilst writting the HTML fot the quiz I tried to replicate the placement and layout of the elements with in each section so that buttons were in the same place on each screen.
+For example the 'Home' button wich appears in multiple places is always at the bottom of the screen. The color scheme is the same through out the game as well as the background image remaining the same to keep the feel of the game uniform.
 
   * Test
 
@@ -279,6 +283,11 @@ The quiz now pulls the questions and answers from the API and the text shows cor
     the home button was a class of button as it appears in multiple places as such I added an additional step where the buttons were moved into an array and then the function was called on each of them.
     This was successful and the function now works at all locations.
 
+#### API not pulling the answer through
+
+   The function to pull the information for quiz questions and answers was running but on the screen only the question was showing, this was because I hadn't fully linked the answers to the correct elements on the page.
+   This was quickly and easily fixed, the function now pulls through all the needed infromation.
+
   
 [Back to Top](#table-of-contents)
 
@@ -310,10 +319,11 @@ https://yourgithubusername.github.io/your-repo-name
 
 ### Credits
 
-  * [James Q Quick](https://www.youtube.com/c/jamesqquick)
-  * [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
-  * CI tutors & Simen
-  * Paul and Connie
-  * My family
+   The project has not been an easy one for me as Javascript has been quite challenging for me and I've needed quite a bit of support both in an actual sense from my Mentor Simen and also
+   fronm the tutors on tutor support, but also from my friends and family who have been brilliant cheerleaders when thing were not working and I couldn't see why.
+   I should also thank [James Q Quick](https://www.youtube.com/c/jamesqquick) and [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) as watching thier channels was very helpful
+   for me getting to grips with Javascript.
+   One final shout out to Paul and Connie, very good friends who have helped me think through my code and what I need to do to fix it.
+
 
 [Back to Top](#table-of-contents)
