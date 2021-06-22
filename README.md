@@ -211,9 +211,16 @@ For example the 'Home' button wich appears in multiple places is always at the b
 
   * Test
 
+The different screens within the quiz all have a similar design and feel so the quiz works nicely as it move through the play stages.
+
   * Result
+![Home screen](assets/images/screenshots/homeScreen)
+![How screen](assets/images/screenshots/howScreen)
 
   * Verdict
+
+As you can see from the screen shots above the design flows through the quiz keeing the asthetic going through out the game.
+I am happy with the design flow for this quiz.
 
 #### As a user, I want ro be able to see my score.
 
@@ -236,7 +243,7 @@ as well as showing on the end screen.
 
 The results screen can be seen in the below image showing the end score and a message for the player.
 
-![Score screen showing results](assets/images/scoreScreen.png)
+![Score screen showing results](assets/images/screenshots/scoreScreen.png)
    
   * Verdict
 
@@ -262,10 +269,11 @@ This was tested by playing the game multiple times to ensure that the questions 
 
 The quiz now pulls the questions and answers from the API and the text shows correctly for the user to easily read.
 
-![game screen](assets/images/gameScreen.png)
+![game screen](assets/images/screenshots/gameScreen.png)
 
   * Verdict
-  
+
+The user can see questions and answers to choose from so can play the quiz.  
   
 [Back to Top](#table-of-contents)
 
