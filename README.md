@@ -214,13 +214,25 @@ subtle and added the interest but the game was still easily playable for the use
 #### As a user, I want ro be able to see my score.
 
   * Plan
+To write a JS function that would increment the users score as hey were playing and then to 
+pass that score to the end screen where the user will recieve a tailoerd message depending upon thier score.
 
   * Implementation
 
+The score function to implement the score was added but I struggled to pass the score information to the end screen
+after some research and a littl trial and error as score was a class and it needed to be altered to an id for the 
+information to show in two seperate locations.
+
   * Test
 
-  * Result
-   [Score Screen](assets/images/screenshots/score-screen.png)
+To test this function I played through the game to see that the score was showing and updating as I played 
+as well as showing on the end screen.
+
+  * Results
+
+The results screen can be seen in the below image showing the end score and a message for the player.
+![Score Screen showing results](images/score-screen.png)
+   
   * Verdict
 
 #### To test their knowledge of science and nature.
