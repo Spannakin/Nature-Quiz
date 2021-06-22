@@ -231,19 +231,34 @@ as well as showing on the end screen.
   * Results
 
 The results screen can be seen in the below image showing the end score and a message for the player.
-![Score Screen showing results](images/score-screen.png)
+
+![Score screen showing results](..assets/images/score-screen.png)
    
   * Verdict
+
+The game score inciments as the user plays and passes to the end screen working as expected.
 
 #### To test their knowledge of science and nature.
 
   * Plan
 
+To use and API to porvide the user with questions relating to science and nature to test their knowledge.
+
   * Implementation
+
+The API was acces via JS and the infomation converted and formatted to be playable in the game, providing 5 questions with m shuffled answers for the user to select from.
+Initially I had some issues with the question being pulled through but no answers as such I had to work on my code for the answers to pull through this was due to the my not linking the elements correctly.
+I also had initially set the text to show InnerText rather than InnerHTML which ment that some of the symbols were having trouble showing correctly this has also been corrected. 
 
   * Test
 
+This was tested by playing the game multiple times to ensure that the questions that were arring were appropriate and that hte functions wrt=itten worked correctly.
+
   * Result
+
+The quiz now pulls the questions and answers from the API and the text shows correctly for the user to easily read.
+
+![game screen](assets/images/game-screen.png)
 
   * Verdict
   
