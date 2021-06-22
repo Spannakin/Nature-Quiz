@@ -6,7 +6,7 @@
     --btn-color:#274c77;
     --text-color:#5f788d;
     --background-color:#6096ba;
-
+    --box-background-color:#ffffffd5;
 }
 
 html {
@@ -65,7 +65,7 @@ p {
 }
 
 .box {
-    background:#ffffffd5;
+    background: var(--box-background-color);
     padding: 2rem;
     border-radius: 2rem;
     margin: 1rem;
@@ -98,7 +98,7 @@ p {
 }
 
 #game-box {
-    background:#ffffffd5;
+    background:var(--box-background-color);
     padding: 1rem;
     border-radius: 2rem;
     margin: 0.5rem;
@@ -116,7 +116,7 @@ p {
     margin-bottom: 1rem;
     text-decoration: none;
     color: #e7ecef;
-    background-color:var(--btn-color)
+    background-color:var(--btn-color);
 }
 
 .home-button {
