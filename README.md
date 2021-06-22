@@ -247,7 +247,7 @@ The results screen can be seen in the below image showing the end score and a me
    
   * Verdict
 
-The game score inciments as the user plays and passes to the end screen working as expected.
+The game score inciments as the user plays and passes to the end screen working as expected as you can see in the above screenshot.
 
 #### To test their knowledge of science and nature.
 
@@ -273,7 +273,7 @@ The quiz now pulls the questions and answers from the API and the text shows cor
 
   * Verdict
 
-The user can see questions and answers to choose from so can play the quiz.  
+As you can see in the above screenshot the user can see questions and answers to choose from so can play the quiz.  
   
 [Back to Top](#table-of-contents)
 
